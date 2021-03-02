@@ -1,0 +1,17 @@
+.flexRowContent--home-info {
+  background-color: #575756 !important;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexRow {
+  margin: 0;
+  display: flex;
+  margin-bottom: auto;
+}
+
+.stretchChildrenWidth {
+  align-items: center;
+  justify-content: flex-end;
+}

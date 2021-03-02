@@ -1,0 +1,39 @@
+.sliderArrows {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  left: 0px;
+  top: 0px;
+
+  background: #EAE9E6 !important;
+  opacity: 0.5;
+}
+.sliderLeftArrow {
+  left: 240px;
+  top: 160px;
+  
+}
+.sliderRightArrow {
+  left: 1080px;
+  top: 160px;
+  opacity: 0.3;
+  filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.25));
+  border: 2px;
+}
+.caretIcon {
+  width: 12px;
+  height: 15px;
+  color: #1d1d1b;
+}
+
+.paginationDot {
+  height: 8px;
+  border-radius: 2px;
+    width: 64px !important;
+   background-color: #1d1d1b; 
+   margin-bottom: 17px;
+}
+
+.paginationDot--isActive {
+    background-color: #EC671A !important;
+}

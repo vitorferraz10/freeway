@@ -1,0 +1,118 @@
+{
+  "store.home": {
+    "blocks": ["list-context.image-list#main", "flex-layout.row#home"]
+  },
+  "list-context.image-list#main": {
+    "children": ["slider-layout#images"],
+    "props": {
+      "height": 650,
+      "images": [
+        {
+          "image": "assets/bannerfreeway1.png",
+          "description": "freeway store banner"
+        },
+        {
+          "image": "assets/bannerfreeway1.png"
+        }
+      ]
+    }
+  },
+  "slider-layout#images": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true
+    }
+  },
+  "flex-layout.row#home": {
+    "children": [
+      "flex-layout.row#child-card",
+      "flex-layout.row#child-shipping",
+      "flex-layout.row#child-exchange"
+    ],
+    "props": {
+      "blockClass": "home-info",
+      "fullWidth": true
+    }
+  },
+  "image#card": {
+    "props": {
+      "src": "assets/card.png",
+      "maxWidth": "32px",
+      "maxHeight": "32px",
+      "blockClass": "image-row"
+    }
+  },
+  "flex-layout.row#child-card": {
+    "children": ["image#card", "rich-text#card"],
+    "props": {
+      "blockClass": "row-child"
+    }
+  },
+  "rich-text#card": {
+    "props": {
+      "text": "Até 10x sem juros <br> parcela minima de R$ 60,00",
+      "blockClass": "content-text-main"
+    }
+  },
+  "flex-layout.row#child-shipping": {
+    "children": ["image#shipping", "rich-text#shipping"],
+
+    "props": {
+      "blockClass": "row-child"
+    }
+  },
+  "rich-text#shipping": {
+    "props": {
+      "text": "Frete grátis <br> Compras acima de R$ 200,00",
+      "blockClass": "content-text-main"
+    }
+  },
+  "image#shipping": {
+    "props": {
+      "src": "assets/frete.png",
+      "maxWidth": "32px",
+      "maxHeight": "32px",
+      "blockClass": "image-row"
+    }
+  },
+
+  "flex-layout.row#child-exchange": {
+    "children": ["image#exchange", "rich-text#exchange"],
+    "props": {
+      "blockClass": "row-child"
+    }
+  },
+  "image#exchange": {
+    "props": {
+      "src": "assets/troca-facil.png",
+      "maxWidth": "32px",
+      "maxHeight": "32px",
+      "blockClass": "image-row"
+    }
+  },
+  "rich-text#exchange": {
+    "props": {
+      "text": "Troca fácil",
+      "blockClass": "content-text-main"
+    }
+  }
+/*   "list-context.product-list#vitrine-main": {
+    "blocks": ["product-summary.shelf#vitrine"],
+    "children": ["slider-layout#demo-products"]
+  },
+
+  "product-summary.shelf#vitrine": {
+    "children": [
+      "product-summary-name",
+      "product-summary-description",
+      "product-summary-image",
+      "product-summary-price",
+      "product-summary-sku-selector",
+      "product-summary-buy-button"
+    ]
+   }*/
+}
