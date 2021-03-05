@@ -1,11 +1,25 @@
 {
   "store.home": {
-    "blocks": ["list-context.image-list#main", "flex-layout.row#home"]
+    "blocks": [
+      "list-context.image-list#main",
+      "flex-layout.row#home",
+      "flex-layout.row#shelf-home",
+      "flex-layout.row#images-container",
+      "flex-layout.row#shelf-home-2",
+      "flex-layout.row#images-trio-banner",
+      "flex-layout.row#sub-marcas",
+      "flex-layout.row#banner-down-submarcas",
+      "flex-layout.row#shelf-home-3",
+      "flex-layout.row#newsletter",
+      "flex-layout.row#departamentos",
+      "flex-layout.row#layer"
+    ]
   },
   "list-context.image-list#main": {
     "children": ["slider-layout#images"],
     "props": {
       "height": 650,
+      "maxWidth": "2000px",
       "images": [
         {
           "image": "assets/bannerfreeway1.png",
@@ -24,7 +38,8 @@
         "tablet": 1,
         "phone": 1
       },
-      "infinite": true
+      "infinite": true,
+      "blockClass": "images"
     }
   },
   "flex-layout.row#home": {
@@ -35,7 +50,8 @@
     ],
     "props": {
       "blockClass": "home-info",
-      "fullWidth": true
+      "fullWidth": true,
+      "horizontalAlign": "center"
     }
   },
   "image#card": {
@@ -49,12 +65,14 @@
   "flex-layout.row#child-card": {
     "children": ["image#card", "rich-text#card"],
     "props": {
-      "blockClass": "row-child"
+      "blockClass": "row-child", 
+      "preventHorizontalStretch": true, 
+      "horizontalAlign": "center"
     }
   },
   "rich-text#card": {
     "props": {
-      "text": "Até 10x sem juros <br> parcela minima de R$ 60,00",
+      "text": "**Até 10x sem juros** <br> parcela minima de R$ 60,00",
       "blockClass": "content-text-main"
     }
   },
@@ -62,12 +80,14 @@
     "children": ["image#shipping", "rich-text#shipping"],
 
     "props": {
-      "blockClass": "row-child"
+      "blockClass": "row-child",
+      "preventHorizontalStretch": true, 
+      "horizontalAlign": "center"
     }
   },
   "rich-text#shipping": {
     "props": {
-      "text": "Frete grátis <br> Compras acima de R$ 200,00",
+      "text": "**Frete grátis** <br> Compras acima de R$ 200,00",
       "blockClass": "content-text-main"
     }
   },
@@ -83,7 +103,9 @@
   "flex-layout.row#child-exchange": {
     "children": ["image#exchange", "rich-text#exchange"],
     "props": {
-      "blockClass": "row-child"
+      "blockClass": "row-child",
+      "preventHorizontalStretch": true, 
+      "horizontalAlign": "center"
     }
   },
   "image#exchange": {
@@ -99,20 +121,330 @@
       "text": "Troca fácil",
       "blockClass": "content-text-main"
     }
-  }
-/*   "list-context.product-list#vitrine-main": {
-    "blocks": ["product-summary.shelf#vitrine"],
-    "children": ["slider-layout#demo-products"]
   },
-
+  "flex-layout.row#shelf-home": { "children": ["flex-layout.col#shelf-home"] },
+  "flex-layout.col#shelf-home": {
+    "children": ["rich-text#shelf", "list-context.product-list#shelf"]
+  },
+  "list-context.product-list#shelf": {
+    "blocks": ["product-summary.shelf#vitrine"],
+    "children": ["slider-layout#shelf"]
+  },
   "product-summary.shelf#vitrine": {
     "children": [
-      "product-summary-name",
-      "product-summary-description",
       "product-summary-image",
-      "product-summary-price",
-      "product-summary-sku-selector",
-      "product-summary-buy-button"
+      "product-summary-name",
+      "product-rating-inline",
+      "product-summary-space",
+      "product-summary-price"
     ]
-   }*/
+  },
+  "slider-layout#shelf": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 1,
+        "phone": 1
+      },
+      "blockClass": "shelf-vitrine",
+      "infinite": true
+    }
+  },
+  "rich-text#shelf": {
+    "props": {
+      "blockClass": "rich-text-shelf",
+      "text": "Mais **vendidos**"
+    }
+  },
+  "flex-layout.row#images-container": {
+    "children": [
+      "stack-layout#container-main",
+      "flex-layout.col#col-container"
+    ],
+    "props": {
+      "blockClass": "images-container",
+      "colGap": 5,
+      "colSizing": "equal"
+    }
+  },
+
+  "stack-layout#container-main": {
+    "children": ["image#container-image"],
+    "props": {
+      "blockClass": "container-main"
+    }
+  },
+
+  "image#container-image": {
+    "props": {
+      "src": "assets/image-principal-container.png",
+      "blockClass": "container-image",
+      "maxHeight": "100%",
+      "max-height": "600px"
+    }
+  },
+  "flex-layout.col#col-container": {
+    "children": ["image#flex-1", "image#flex-2"],
+    "props": {
+      "blockClass": "container-imagem-flex",
+      "horizontalAlign": "center"
+    }
+  },
+
+  "image#flex-1": {
+    "props": {
+      "src": "assets/image-flex1.png",
+      "maxHeight": "284px"
+    }
+  },
+  "image#flex-2": {
+    "props": {
+      "src": "assets/image-flex2.png",
+      "maxHeight": "284px"
+    }
+  },
+  "flex-layout.row#shelf-home-2": {
+    "children": ["flex-layout.col#shelf-home-2"]
+  },
+  "flex-layout.col#shelf-home-2": {
+    "children": ["rich-text#shelf-2", "list-context.product-list#shelf-2"]
+  },
+  "list-context.product-list#shelf-2": {
+    "blocks": ["product-summary.shelf#vitrine-2"],
+    "children": ["slider-layout#shelf-2"]
+  },
+  "product-summary.shelf#vitrine-2": {
+    "children": [
+      "product-summary-image",
+      "product-summary-name",
+      "product-rating-inline",
+      "product-summary-space",
+      "product-summary-price"
+    ]
+  },
+  "slider-layout#shelf-2": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 1,
+        "phone": 1
+      },
+      "blockClass": "shelf-vitrine-2",
+      "infinite": true
+    }
+  },
+  "rich-text#shelf-2": {
+    "props": {
+      "blockClass": "rich-text-shelf-2",
+      "text": "Mais **vendidos**"
+    }
+  },
+
+  "flex-layout.row#images-trio-banner": {
+    "children": [
+      "image#trio-banner1",
+      "image#trio-banner2",
+      "image#trio-banner3"
+    ],
+    "props": {
+      "blockClass": "images-trio-banner",
+      "colGap": 4,
+      "colSizing": "equal"
+    }
+  },
+
+  "image#trio-banner1": {
+    "props": {
+      "src": "assets/trio-banner-1.png",
+      "maxWidth": "100%",
+      "blockClass": "image-1-trio"
+    }
+  },
+  "image#trio-banner2": {
+    "props": {
+      "src": "assets/trio-banner-2.png",
+      "maxWidth": "100%",
+      "blockClass": "image-2-trio"
+    }
+  },
+  "image#trio-banner3": {
+    "props": {
+      "src": "assets/trio-banner-3.png",
+      "maxWidth": "100%",
+      "blockClass": "image-3-trio"
+    }
+  },
+  "flex-layout.row#sub-marcas": {
+    "children": ["image#sub-marcas"],
+    "props": {
+      "blockClass": "row-sub-marcas"
+    }
+  },
+  "image#sub-marcas": {
+    "props": {
+      "src": "assets/submarcas.png",
+      "maxWidth": "100%",
+      "maxHeight": "150px",
+      "height": "80%",
+      "blockClass": "image-submarcas"
+    }
+  },
+
+  "flex-layout.row#banner-down-submarcas": {
+    "children": ["image#banner-down-submarcas"],
+    "props": {
+      "blockClass": "banner-down-submarcas"
+    }
+  },
+  "image#banner-down-submarcas": {
+    "props": {
+      "src": "assets/down-submarcas.png",
+      "maxWidth": "100%",
+      "maxHeight": "500px",
+      "height": "80%",
+      "blockClass": "image-down-submarcas"
+    }
+  },
+  "flex-layout.row#shelf-home-3": {
+    "children": ["flex-layout.col#shelf-home"]
+  },
+  "flex-layout.col#shelf-home-3": {
+    "children": ["rich-text#shelf", "list-context.product-list#shelf"]
+  },
+  "list-context.product-list#shelf-3": {
+    "blocks": ["product-summary.shelf#vitrine"],
+    "children": ["slider-layout#shelf"]
+  },
+  "product-summary.shelf#vitrine-3": {
+    "children": [
+      "product-summary-image",
+      "product-summary-name",
+      "product-rating-inline",
+      "product-summary-space",
+      "product-summary-price"
+    ]
+  },
+  "slider-layout#shelf3": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 1,
+        "phone": 1
+      },
+      "blockClass": "shelf-vitrine",
+      "infinite": true
+    }
+  },
+  "rich-text#shelf3": {
+    "props": {
+      "blockClass": "rich-text-shelf-2",
+      "text": "Mais **vendidos**"
+    }
+  },
+
+  "flex-layout.row#newsletter": {
+    "children": ["flex-layout.row#title-newsletter", "newsletter#info"],
+    "props": {
+      "max-width": "90%",
+      "blockClass": "newsletter"
+    }
+  },
+
+  "flex-layout.row#title-newsletter": {
+    "children": ["image#logo-news", "rich-text#newsletter"],
+    "props": {
+      "blockClass": "newsletter-col1",
+      "preventHorizontalStretch": true
+    }
+  },
+
+  "image#logo-news": {
+    "props": {
+      "src": "assets/logo-newsletter.png",
+      "width": "66px",
+      "max-height": "58px",
+      "blockClass": "logo-newsletter"
+    }
+  },
+
+  "rich-text#newsletter": {
+    "props": {
+      "blockClass": "text-newsletter",
+      "text": "**RECEBA AS NOVIDADES DA FREEWAY** <br> Cadastre-se e receba em primeira mão nossas novidades"
+    }
+  },
+
+  "newsletter#info": {
+    "props": {
+      "placeholder": "Digite seu e-mail",
+      "submit": "Cadastrar",
+      "hideLabel": true,
+      "blockClass": "newsletter-form"
+    }
+  },
+
+    "flex-layout.row#departamentos": {
+    "children": [
+      "image#flex-column-1",
+      "image#flex-column-2",
+      "image#flex-column-3", 
+      "image#flex-column-4"
+    ],
+    "props": {
+      "blockClass": "images-trio-banner",
+      "colGap": 4,
+      "colSizing": "equal"
+    }
+  },
+
+  "image#flex-column-1": {
+    "props": {
+      "src": "assets/masculino.png",
+      "maxWidth": "100%",
+      "blockClass": "image-1-trio"
+    }
+  },
+  "image#flex-column-2": {
+    "props": {
+      "src": "assets/feminino.png",
+      "maxWidth": "100%",
+      "blockClass": "image-2-trio"
+    }
+  },
+  "image#flex-column-3": {
+    "props": {
+      "src": "assets/acessorios.png",
+      "maxWidth": "100%",
+      "blockClass": "image-3-trio"
+    }
+  }, 
+  "image#flex-column-4": {
+    "props": {
+      "src": "assets/viagem.png",
+      "maxWidth": "100%",
+      "blockClass": "image-3-trio"
+    }
+  },
+
+  "flex-layout.row#layer": {
+    "children": ["rich-text#left", "rich-text#right"],
+    "props": {
+      "blockClass": "layer", 
+      "preventHorizontalStretch": true
+    }
+  },
+  "rich-text#left": {
+    "props": {
+      "text": "A FREEWAY",
+      "blockClass": "text-left-layer"
+      
+    }
+  },
+  "rich-text#right": {
+    "props": {
+      "blockClass": "text-right-layer",
+      "text": "A Freeway é uma marca de calçados masculinos que une qualidade, sustentabilidade, tecnologia e moda, oferecendo<br> muito mais do que calçados. Além de Casual Boots, Casual Shoes, Siders, Bags, Necessaires e Cintos, você encontra aqui<br>inúmeros diferenciais, que proporcionam uma sensação única e fazem do “caminhar” uma experiência sem igual. Conforto<br> térmico, acabamento manual, solado com até 30% de material reciclado, produtos em couro, 27 medidas diferentes de<br> forma para acomodar seu pé, e é claro, o exclusivo sistema EasyWear, que permite um calçar muito mais rápido, ajudam<br> você a levar uma vida mais leve e muito mais confortável!"
+
+    }
+  }
 }

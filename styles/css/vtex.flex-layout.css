@@ -1,17 +1,48 @@
 .flexRowContent--home-info {
-  background-color: #575756 !important;
+ 
   height: 50px;
   justify-content: center;
   align-items: center;
+  max-width: 1318px;
+  margin: 0 auto;
 }
 
-.flexRow {
+.flexRow--home-info {
   margin: 0;
   display: flex;
   margin-bottom: auto;
+  background-color: #575756 ;
 }
 
-.stretchChildrenWidth {
-  align-items: center;
-  justify-content: flex-end;
+
+.flexRow--images-container {
+  max-width: 70%;
+  margin: auto;
+
 }
+/* "newsletter-col1" */
+
+.flexRow--images-trio-banner{
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+
+.flexCol--newsletter-col1{
+  flex-direction: row;
+  margin-left: 1em;
+  
+}
+
+.flexRowContent--newsletter {
+
+  align-items: center;
+}
+
+.flexRowContent--newsletter-coll{
+  margin: auto;
+  margin-left: 1em;
+}
+
+
