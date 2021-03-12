@@ -1,52 +1,81 @@
 .container {
-    overflow: hidden;
-    max-width: 1318px;
-    margin: 0 auto;
+  overflow: hidden;
+  max-width: 1318px;
+  margin: 0 auto;
 }
+
+/*header*/
+.imageElement--img-cart-header{
+  width: 32px;
+  height: 32px;
+}
+.searchBarInnerContainer{
+  width: 503px;
+}
+.searchBarContainer{
+  height: 32px;
+  width: 532px;
+  border-radius: 0;
+}
+
+.searchBarContainer :global(.vtex-store-components){
+  background-color: #1D1D1B;
+}
+
 
 .imageElement--image-row {
   margin-right: 6px;
   align-self: center;
-
 }
 
 .imageElement--image-3-trio,
 .imageElement--image-2-trio {
   max-width: 300px;
-
-  ;
 }
 
 .imageElement--image-1-trio {
   max-width: 300px;
-  
+
   margin: 0;
 }
 
 .inputGroup {
   max-width: 440px;
-
 }
 
+.imageElement--img-flex1 {
+  margin-bottom: 32px;
+}
 
-/*newsletter*/
+.installmentsPrice {
+  color: #1d1d1b;
+  font-weight: bold;
+}
 
+/*NEWSLETTER*/
 .container--newsletter-form :global(.vtex-input-prefix__group) {
   width: 440px;
   height: 40px;
   border: solid 1px;
-  color: #575756;
 }
-
-.container--newsletter-form :global(.vtex-button){
-  max-width: 142px;
+.container--newsletter-form :global(.vtex-button) {
+  max-width: 119px;
   height: 32px;
   border-radius: 0;
   font-size: 14px;
-  background-color: #575756;
-
-
-/* .buttonContainer--newsletter-form{
-
 }
- */
+
+.container--newsletter-form :global(.vtex-input-prefix__group) {
+  color: #575756;
+}
+.container--newsletter-form :global(.vtex-button) {
+  background-color: #575756;
+}
+
+.imageElement--img-payment {
+  margin-right: 10px;
+}
+
+.imageElement--img-sociais-midia {
+  margin-right: 10px;
+}

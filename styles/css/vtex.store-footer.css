@@ -1,0 +1,16 @@
+.footerLayout--footer{
+    
+    max-height: 260px;
+}
+
+.socialNetworksContainer{
+    margin: 24px;
+}
+
+.socialNetworkLink--facebook, .socialNetworkLink--instagram, .socialNetworkLink--twitter{
+    margin-right: 8px;
+}
+
+.footerLayout--footer {
+    background-color: #1d1d1b;
+}

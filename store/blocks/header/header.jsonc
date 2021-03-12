@@ -1,23 +1,247 @@
 {
   "header": {
-    "blocks": []
-  }/* ,
-    "header-layout.desktop":{
-      "children":{}
-    }, 
-    "header-layout.mobile":{
-      "children":{}
-    } */
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+
+  "header-layout.desktop": {
+    "children": [
+      "flex-layout.row#header-desk",
+      "flex-layout.row#line-down-header"
+    ]
+  },
+  "header-layout.mobile": {
+    "children": []
+  },
+
+  "flex-layout.row#header-desk": {
+    "children": [
+      "flex-layout.row#logo",
+      "flex-layout.row#busca",
+      "flex-layout.row#menu-header"
+    ],
+    "props": {
+      "blockClass": "header-line",
+      "horizontalAlign": "center",
+      "preventHorizontalStretch": true
+    }
+  },
+  "flex-layout.row#logo": {
+    "children": ["logo#desktop"],
+    "props": {
+      "blockClass": "row-logo"
+    }
+  },
+
+  "logo#desktop": {
+    "props": {
+      "title": "Logo",
+      "href": "assets/logo.png",
+      "url": "assets/logo.png",
+      "width": "234px",
+      "heigth": "56px"
+    }
+  },
+
+  "flex-layout.row#busca": {
+    "children": ["search-bar#header-busca"],
+    "props": {
+      "blockClass": "search-bar-busca",
+      "horizontalAlign": "center"
+    }
+  },
+  "search-bar#header-busca": {
+  
+    "props": {
+      "blockClass": "search-bar-header",
+      "openAutocompleteOnFocus": true
+    }
+  },
+
+  "flex-layout.row#menu-header": {
+    "children": ["vtex.menu@2.x:menu#header"],
+    "props": {
+      "blockClass": "menu-header",
+      "horizontalAlign": "center"
+    }
+  },
+  "vtex.menu@2.x:menu#header": {
+    "children": [
+      "menu-item#header-item-1",
+      "menu-item#header-item-2",
+      "image#card-header"
+    ],
+    "props": {
+      "blockClass": "items-header",
+      "horizontalAlign": "center"
+    }
+  },
+  "menu-item#header-item-1": {
+    "props": {
+      "blockClass": "items-header-down-p",
+      "id": "header-item-1",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Ajuda",
+        "text": "Ajuda" 
+      }
+    }
+  },
+  "menu-item#header-item-2": {
+    "props": {
+      "blockClass": "items-header-down-p",
+      "id": "header-item-2",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Minha Conta",
+        "text": "Minha Conta"
+      }
+    }
+  },
+  "image#card-header": {
+    "props": {
+      "src": "assets/cart.png",
+      "maxWidth": "32px",
+      "maxHeigth": "32px",
+      "blockClass": "img-cart-header"
+    }
+  },
+
+  "flex-layout.row#line-down-header": {
+    "children": ["vtex.menu@2.x:menu#down-header"], 
+    "props": {
+      "blockClass": "menu-down-header"
+    }
+  },
+  "vtex.menu@2.x:menu#down-header": {
+    "children": [
+      "menu-item#down-header-item-1",
+      "menu-item#down-header-item-2",
+      "menu-item#down-header-item-3",
+      "menu-item#down-header-item-4",
+      "menu-item#down-header-item-5",
+      "menu-item#down-header-item-6",
+      "menu-item#down-header-item-7"
+    ], 
+    "props": {
+      "blockClass": "items-header-1",
+      "horizontalAlign": "center"
+    }
+  },
+  "menu-item#down-header-item-1": {
+    "props": {
+      "blockClass": "items-header-down-p",
+      "id": "down-header-item-1",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "LANÇAMENTOS",
+        "text": "LANÇAMENTOS"
+      }
+    }
+  },
+  "menu-item#down-header-item-2": {
+    "props": {
+      "blockClass": "items-header-down-p",
+      "id": "down-header-item-2",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "MASCULINO",
+        "text": "MASCULINO"
+      }
+    }
+  },
+  "menu-item#down-header-item-3": {
+    "props": {
+      "blockClass": "items-header-down-p",
+      "id": "down-header-item-3",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "FEMININO",
+        "text": "FEMININO"
+      }
+    }
+  },
+  "menu-item#down-header-item-4": {
+    "props": {
+      "blockClass": "items-header-down-p",
+      "id": "down-header-item-4",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "ACESSÓRIOS",
+        "text": "ACESSÓRIOS"
+      }
+    }
+  }, 
+  "menu-item#down-header-item-5": {
+    "props":{
+      "blockClass": "items-header-down-p",
+      "id": "down-header-item-5",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "ARTIGOS PARA VIAGEM",
+        "text": "ARTIGOS PARA VIAGEM"
+      }
+    }
+  }, 
+  "menu-item#down-header-item-6": {
+    "props":{
+      "blockClass": "items-header-down-p",
+      "id": "down-header-item-6",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "ULTRA COMFORT",
+        "text": "ULTRA COMFORT"
+      }
+    }
+  }, 
+  "menu-item#down-header-item-7": {
+    "props":{
+      "blockClass": "items-header-down-p-orange",
+      "id": "down-header-item-7",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "LIQUIDA FREEWAY",
+        "text": "LIQUIDA FREEWAY"
+      }
+    }
   }
-
-
-
-
-
-
-
-  
-
-  
- 
-  
+}

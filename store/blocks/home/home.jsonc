@@ -48,10 +48,11 @@
       "flex-layout.row#child-shipping",
       "flex-layout.row#child-exchange"
     ],
-    "props": {
+    "props": {  
       "blockClass": "home-info",
       "fullWidth": true,
-      "horizontalAlign": "center"
+      "horizontalAlign": "center",
+      "width": "2000px"
     }
   },
   "image#card": {
@@ -118,7 +119,7 @@
   },
   "rich-text#exchange": {
     "props": {
-      "text": "Troca fácil",
+      "text": "**Troca fácil**",
       "blockClass": "content-text-main"
     }
   },
@@ -143,11 +144,13 @@
     "props": {
       "itemsPerPage": {
         "desktop": 4,
-        "tablet": 1,
+        "tablet": 3,
         "phone": 1
       },
       "blockClass": "shelf-vitrine",
-      "infinite": true
+      "infinite": true, 
+      "maxWidth": "1318px",
+      "max-height": "452px"
     }
   },
   "rich-text#shelf": {
@@ -163,8 +166,9 @@
     ],
     "props": {
       "blockClass": "images-container",
-      "colGap": 5,
-      "colSizing": "equal"
+      "preventHorizontalStretch": true, 
+      "maxWidth": "1318px"
+             
     }
   },
 
@@ -172,6 +176,7 @@
     "children": ["image#container-image"],
     "props": {
       "blockClass": "container-main"
+      
     }
   },
 
@@ -179,32 +184,41 @@
     "props": {
       "src": "assets/image-principal-container.png",
       "blockClass": "container-image",
-      "maxHeight": "100%",
-      "max-height": "600px"
+      "height": "600px",
+      "width": "656px"
+     
     }
   },
   "flex-layout.col#col-container": {
     "children": ["image#flex-1", "image#flex-2"],
     "props": {
       "blockClass": "container-imagem-flex",
-      "horizontalAlign": "center"
+      "horizontalAlign": "center" 
+      
     }
   },
 
   "image#flex-1": {
     "props": {
       "src": "assets/image-flex1.png",
-      "maxHeight": "284px"
+      "height": "284px",
+      "width": "630px", 
+      "blockClass": "img-flex1"
     }
   },
   "image#flex-2": {
     "props": {
       "src": "assets/image-flex2.png",
-      "maxHeight": "284px"
+      "height": "284px",
+      "width": "630px",
+      "blockClass": "image-flex2"
     }
   },
   "flex-layout.row#shelf-home-2": {
-    "children": ["flex-layout.col#shelf-home-2"]
+    "children": ["flex-layout.col#shelf-home-2"], 
+    "props": {
+      "maxWidth": "1318px"
+    }
   },
   "flex-layout.col#shelf-home-2": {
     "children": ["rich-text#shelf-2", "list-context.product-list#shelf-2"]
@@ -226,7 +240,7 @@
     "props": {
       "itemsPerPage": {
         "desktop": 4,
-        "tablet": 1,
+        "tablet": 3,
         "phone": 1
       },
       "blockClass": "shelf-vitrine-2",
@@ -249,7 +263,8 @@
     "props": {
       "blockClass": "images-trio-banner",
       "colGap": 4,
-      "colSizing": "equal"
+      "colSizing": "equal", 
+      "maxWidth": "1318px"
     }
   },
 
@@ -277,7 +292,8 @@
   "flex-layout.row#sub-marcas": {
     "children": ["image#sub-marcas"],
     "props": {
-      "blockClass": "row-sub-marcas"
+      "blockClass": "row-sub-marcas", 
+      "maxWidth": "1318px"
     }
   },
   "image#sub-marcas": {
@@ -293,7 +309,8 @@
   "flex-layout.row#banner-down-submarcas": {
     "children": ["image#banner-down-submarcas"],
     "props": {
-      "blockClass": "banner-down-submarcas"
+      "blockClass": "banner-down-submarcas", 
+      "maxWidth": "1318px"
     }
   },
   "image#banner-down-submarcas": {
@@ -332,7 +349,8 @@
         "phone": 1
       },
       "blockClass": "shelf-vitrine",
-      "infinite": true
+      "infinite": true, 
+      "maxWidth": "1318px"
     }
   },
   "rich-text#shelf3": {
@@ -374,14 +392,14 @@
     }
   },
 
-  "newsletter#info": {
-    "props": {
-      "placeholder": "Digite seu e-mail",
-      "submit": "Cadastrar",
-      "hideLabel": true,
-      "blockClass": "newsletter-form"
-    }
-  },
+    "newsletter#info": {
+      "props": {
+        "placeholder": "Digite seu e-mail",
+        "submit": "Cadastrar",
+        "hideLabel": true,
+        "blockClass": "newsletter-form"
+      }
+    },
 
     "flex-layout.row#departamentos": {
     "children": [
@@ -391,9 +409,10 @@
       "image#flex-column-4"
     ],
     "props": {
-      "blockClass": "images-trio-banner",
+      "blockClass": "images-for-banner",
       "colGap": 4,
-      "colSizing": "equal"
+      "colSizing": "equal", 
+      "maxWidth": "1317px"
     }
   },
 
@@ -401,28 +420,28 @@
     "props": {
       "src": "assets/masculino.png",
       "maxWidth": "100%",
-      "blockClass": "image-1-trio"
+      "blockClass": "image-for"
     }
   },
   "image#flex-column-2": {
     "props": {
       "src": "assets/feminino.png",
       "maxWidth": "100%",
-      "blockClass": "image-2-trio"
+      "blockClass": "image-for"
     }
   },
   "image#flex-column-3": {
     "props": {
       "src": "assets/acessorios.png",
       "maxWidth": "100%",
-      "blockClass": "image-3-trio"
+      "blockClass": "image-for"
     }
   }, 
   "image#flex-column-4": {
     "props": {
       "src": "assets/viagem.png",
       "maxWidth": "100%",
-      "blockClass": "image-3-trio"
+      "blockClass": "image-for"
     }
   },
 

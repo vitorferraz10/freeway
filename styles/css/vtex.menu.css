@@ -1,0 +1,44 @@
+
+.menuContainer--col-1-menu, .menuContainer--footer-col1 {
+        align-items: center;
+}
+    
+.menuItem{
+        margin-top: 10px;
+}
+.styledLink {
+        font-size: 12px;
+}
+
+.styledLinkContent--line-menu-footer{
+    color: #fff;
+}
+
+.styledLink {
+    font-family: Spartan;
+    color: #fff;
+
+}
+
+.menuContainer--items-header{
+    align-items: center;
+    color: #EAE9E6;
+}
+
+.menuContainer--items-header-1{
+    align-items: center;
+    height: 40px;
+    justify-content: center;
+}
+
+.styledLink--items-header-down-p{
+color: #EAE9E6;
+font-size: 14px;
+font-weight: 400;
+}
+
+.styledLink--items-header-down-p-orange{
+    color: #ec671a;
+    font-size: 14px;
+    font-weight: 400;
+}

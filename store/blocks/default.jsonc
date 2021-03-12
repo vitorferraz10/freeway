@@ -1,8 +1,8 @@
-{
+ {
   "store.orderplaced": {
-    "blocks": ["order-placed"]
-  },
-
+    "blocks": []
+  }
+/* 
   "store.account": {
     "blocks": ["my-account"],
     "parent": {
@@ -33,4 +33,5 @@
       "add-to-cart-button"
     ]
   }
+  */
 }

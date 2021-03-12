@@ -2,15 +2,597 @@
   "footer": {
     "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
   },
-  "footer-layout.desktop": { 
+  "footer-layout.desktop": {
     "children": [
-      
+      "flex-layout.row#footer-desktop",
+      "flex-layout.row#footer-localization"
+    ],
+    "props": {
+      "blockClass": "footer"
+    }
+  },
+
+  "footer-layout.mobile": {
+    "children": ["flex-layout.row#footer-mobile"],
+    "props": {
+      "maxWidth": "767px"
+    }
+  },
+  "flex-layout.row#footer-mobile": {
+    "children": ["flex-layout.col#footer-mobile"],
+    "props": {
+      "maxWidth": "767px",
+      "maxHeigth": "250px"
+    }
+  },
+  "flex-layout.col#footer-mobile": {
+    "children": [
+      "flex-layout.row#line-1",
+      "flex-layout.row#line-2",
+      "flex-layout.row#line-3",
+      "flex-layout.row#line-4"
     ]
   },
-  "footer-layout.mobile": { 
-    "children": [
-     
-    ]
+  "flex-layout.row#line-1": {
+    "children": ["rich-text#line-1-footer-Mobile", "image#option-submenu"],
+    "props": {
+      "blockClass": "line-header"
+    }
+  },
 
-}
+  "rich-text#line-1-footer-Mobile": {
+    "props": {
+      "text": "**Institucional**"
+    }
+  },
+  "image#option-submenu": {
+    "props": {
+      "src": "assets/+.png",
+      "max-width": "24px",
+      "maxHeight": "24px"
+    }
+  },
+  "flex-layout.row#line-2": {
+    "children": ["rich-text#line-2-footer-Mobile", "image#option-submenu"],
+    "props": {
+      "blockClass": "line-header"
+    }
+  },
+
+  "rich-text#line-2-footer-Mobile": {
+    "props": {
+      "text": "Atendimento"
+    }
+  },
+  "flex-layout.row#line-3": {
+    "children": ["rich-text#line-3-footer-Mobile", "image#option-submenu"],
+    "props": {
+      "blockClass": "line-header"
+    }
+  },
+  "rich-text#line-3-footer-Mobile": {
+    "props": {
+      "text": "Formas de pagamento"
+    }
+  },
+  "flex-layout.row#line-4": {
+    "children": ["flex-layout.col#footer-col4", "flex-layout.col#footer-col5"],
+    "props": {
+      "blockClass": "footer-mobile-line-4"
+    }
+  },
+
+  "flex-layout.col#line-down-foote-mobile": {
+    "children": [
+      "flex-layout.row#line-1-down-footer",
+      "flex-layout.row#line-2-down-footer"
+    ],
+    "props": {
+      "blockClass": "down-footer",
+      "maxWidth": "767px",
+      "maxHeight": "100.29px"
+    }
+  },
+
+  "flex-layout.row#line-1-down-footer": {
+    "children": ["rich-text#line-1-down-footer"]
+  },
+  "rich-text#line-1-down-footer": {
+    "props": {
+      "text": "Freeway Factory Store | Rua Ezio Pucci, 2951- Distrito Industrial Antonio Della - Torre - CEP: 14406-­078 • Franca / SP • Brasil"
+    }
+  },
+
+  "flex-layout.row#line-2-down-footer": {
+    "children": [
+      "rich-text#line-2-down-footer-1",
+      "rich-text#line-2-down-footer-2"
+    ]
+  },
+
+  "rich-text#line-2-down-footer-1": {
+    "props": {
+      "text": "Desenvolvimento: **Corebiz**"
+    }
+  },
+
+  "rich-text#line-2-down-footer-2": {
+    "props": {
+      "text": "Tecnologia: **VTEX**"
+    }
+  },
+
+  "flex-layout.row#footer-desktop": {
+    "children": [
+      "flex-layout.col#footer-col1",
+      "flex-layout.col#footer-col2",
+      "flex-layout.col#footer-col3",
+      "flex-layout.col#footer-col4",
+      "flex-layout.col#footer-col5"
+    ],
+    "props": {
+      "blockClass": "footer-desk",
+      "max-width": "1318px"
+    }
+  },
+
+  "flex-layout.col#footer-col1": {
+    "children": ["rich-text#title-col1", "vtex.menu@2.x:menu#footer-menu"],
+    "props": {
+      "blockClass": "footer-col1",
+      "max-width": "1318px"
+    }
+  },
+
+  "rich-text#title-col1": {
+    "props": {
+      "text": "**Institucional**",
+      "blockClass": "text-menu-footer"
+    }
+  },
+  "vtex.menu@2.x:menu#footer-menu": {
+    "children": [
+      "menu-item#footer-col1-line-2",
+      "menu-item#footer-col1-line-3",
+      "menu-item#footer-col1-line-4",
+      "menu-item#footer-col1-line-5",
+      "menu-item#footer-col1-line-6",
+      "menu-item#footer-col1-line-7",
+      "menu-item#footer-col1-line-8"
+    ],
+    "props": {
+      "blockClass": "col-1-menu",
+      "orientation": "vertical"
+    }
+  },
+
+  "menu-item#footer-col1-line-2": {
+    "props": {
+      "id": "menu-item-line-2",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Sobre a Freeway",
+        "text": "Sobre a Freeway"
+      }
+    }
+  },
+
+  "menu-item#footer-col1-line-3": {
+    "props": {
+      "id": "menu-item-line-3",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Condição de Frete",
+        "text": "Condição de Frete"
+      }
+    }
+  },
+  "menu-item#footer-col1-line-4": {
+    "props": {
+      "id": "menu-item-line-4",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Politica de Privacidade",
+        "text": "Politica de Privacidade"
+      }
+    }
+  },
+  "menu-item#footer-col1-line-5": {
+    "props": {
+      "id": "menu-item-line-5",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Dicas de Conservação",
+        "text": "Dicas de Conservação"
+      }
+    }
+  },
+  "menu-item#footer-col1-line-6": {
+    "props": {
+      "id": "menu-item-line-6",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Esqueci a Senha",
+        "text": "Esqueci a Senha"
+      }
+    }
+  },
+
+  "menu-item#footer-col1-line-7": {
+    "props": {
+      "id": "menu-item-line-7",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Politica de Troca e Reembolso",
+        "text": "Politica de Troca e Reembolso"
+      }
+    }
+  },
+  "menu-item#footer-col1-line-8": {
+    "props": {
+      "id": "menu-item-line-8",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Politica de Preço",
+        "text": "Politica de Preço"
+      }
+    }
+  },
+
+  "flex-layout.col#footer-col2": {
+    "children": ["rich-text#title-col2", "vtex.menu@2.x:menu#footer-menu-2"],
+    "props": {
+      "blockClass": "footer-col1"
+    }
+  },
+  "rich-text#title-col2": {
+    "props": {
+      "text": "**Atendimento**",
+      "blockClass": "text-menu-footer"
+    }
+  },
+  "vtex.menu@2.x:menu#footer-menu-2": {
+    "children": [
+      "menu-item#footer-col2-line-2",
+      "menu-item#footer-col2-line-3",
+      "menu-item#footer-col2-line-4",
+      "menu-item#footer-col2-line-5"
+    ],
+    "props": {
+      "blockClass": "footer-col1",
+      "orientation": "vertical"
+    }
+  },
+  "menu-item#footer-col2-line-2": {
+    "props": {
+      "id": "menu-item-col2-line-2",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Fale Conosco",
+        "text": "Fale Conosco"
+      }
+    }
+  },
+  "menu-item#footer-col2-line-3": {
+    "props": {
+      "id": "menu-item-col2-line-3",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Duvidas Frequentes",
+        "text": "Duvidas Frequentes"
+      }
+    }
+  },
+  "menu-item#footer-col2-line-4": {
+    "props": {
+      "id": "menu-item-col2-line-4",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Televendas (16)3720-2145",
+        "text": "Televendas (16)3720-2145"
+      }
+    }
+  },
+  "menu-item#footer-col2-line-5": {
+    "props": {
+      "id": "menu-item-col2-line-5",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Trocas e Devoluções",
+        "text": "Trocas e Devoluções"
+      }
+    }
+  },
+
+  "flex-layout.col#footer-col3": {
+    "children": [
+      "rich-text#payment-metods-title",
+      "vtex.menu@2.x:menu#footer-menu-3"
+    ],
+    "props": {
+      "blockClass": "footer-col1"
+    }
+  },
+
+  "rich-text#payment-metods-title": {
+    "props": {
+      "text": "**Formas de pagamentos**",
+      "blockClass": "text-menu-footer"
+    }
+  },
+
+  "vtex.menu@2.x:menu#footer-menu-3": {
+    "children": ["flex-layout.col#icons-payment"],
+    "props": {
+      "blockClass": "footer-col1"
+    }
+  },
+
+  "flex-layout.col#icons-payment": {
+    "children": ["flex-layout.row#payment-1", "flex-layout.row#payment-2"],
+    "props": {
+      "blockClass": "row-icon-1",
+      "maxWidth": "171px",
+      "maxHeight": "56px"
+    }
+  },
+
+  "flex-layout.row#payment-1": {
+    "children": ["image#icon-1", "image#icon-2", "image#icon-3", "image#icon-4"]
+  },
+
+  "image#icon-1": {
+    "props": {
+      "src": "assets/icon-1.png",
+      "width": "33px",
+      "blockClass": "img-payment"
+    }
+  },
+  "image#icon-2": {
+    "props": {
+      "src": "assets/icon-2.png",
+      "width": "33px",
+      "blockClass": "img-payment"
+    }
+  },
+  "image#icon-3": {
+    "props": {
+      "src": "assets/icon-3.png",
+      "width": "33px",
+      "blockClass": "img-payment"
+    }
+  },
+  "image#icon-4": {
+    "props": {
+      "src": "assets/icon-4.png",
+      "width": "33px"
+    }
+  },
+
+  "flex-layout.row#payment-2": {
+    "children": ["image#icon-5", "image#icon-6", "image#icon-7", "image#icon-8"]
+  },
+  "image#icon-5": {
+    "props": {
+      "src": "assets/icon-5.png",
+      "width": "33px",
+      "blockClass": "img-payment"
+    }
+  },
+  "image#icon-6": {
+    "props": {
+      "src": "assets/icon-6.png",
+      "width": "33px",
+      "blockClass": "img-payment"
+    }
+  },
+  "image#icon-7": {
+    "props": {
+      "src": "assets/icon-7.png",
+      "width": "33px",
+      "blockClass": "img-payment"
+    }
+  },
+  "image#icon-8": {
+    "props": {
+      "src": "assets/icon-8.png",
+      "width": "33px"
+    }
+  },
+
+  "flex-layout.col#footer-col4": {
+    "children": [
+      "rich-text#social-network-title",
+      "vtex.menu@2.x:menu#footer-menu-4"
+    ],
+    "props": {
+      "blockClass": "footer-col1"
+    }
+  },
+  "rich-text#social-network-title": {
+    "props": {
+      "text": "**Redes sociais**",
+      "blockClass": "text-menu-footer"
+    }
+  },
+
+  "vtex.menu@2.x:menu#footer-menu-4": {
+    "children": ["flex-layout.row#redes-sociais"],
+    "props": {
+      "blockClass": "footer-col1",
+      "orientation": "vertical"
+    }
+  },
+  "flex-layout.row#redes-sociais": {
+    "children": [
+      "image#social-1",
+      "image#social-2",
+      "image#social-3",
+      "image#social-4"
+    ],
+    "props": {
+      "blockClass": "midias-sociais"
+    }
+  },
+  "image#social-1": {
+    "props": {
+      "src": "assets/ico-facebook.png",
+      "width": "33px",
+      "blockClass": "img-sociais-midia"
+    }
+  },
+  "image#social-2": {
+    "props": {
+      "src": "assets/ico-instagram.png",
+      "width": "33px",
+      "blockClass": "img-sociais-midia"
+    }
+  },
+  "image#social-3": {
+    "props": {
+      "src": "assets/ico-twitter.png",
+      "width": "33px",
+      "blockClass": "img-sociais-midia"
+    }
+  },
+  "image#social-4": {
+    "props": {
+      "src": "assets/ico-youtube.png",
+      "width": "33px"
+    }
+  },
+
+  "flex-layout.col#footer-col5": {
+    "children": ["rich-text#security", "flex-layout.row#img-security"],
+    "props": {
+      "blockClass": "footer-col1",
+      "orientation": "vertical"
+    }
+  },
+  "rich-text#security": {
+    "props": {
+      "text": "**Segurança**",
+      "blockClass": "text-menu-footer"
+    }
+  },
+
+  "flex-layout.row#img-security": {
+    "children": ["image#security-1", "image#security-2"],
+    "props": {
+      "width": "102px",
+      "blockClass": "img-security"
+    }
+  },
+
+  "image#security-1": {
+    "props": {
+      "src": "assets/security-1.png",
+      "maxWidth": "48px",
+      "maxHeight": "30px"
+    }
+  },
+  "image#security-2": {
+    "props": {
+      "src": "assets/security-2.png",
+      "maxWidth": "48px",
+      "maxHeight": "30px"
+    }
+  },
+  "flex-layout.row#footer-localization": {
+    "children": [
+      "flex-layout.col#line-footer1",
+      "flex-layout.col#line-footer2"
+    ],
+    "props": {
+      "blockClass": "row-footer",
+      "fullWidth": true,
+      "colGap": 10,
+      "horizontalAlign": true,
+      "preventHorizontalStretch": true
+    }
+  },
+  "flex-layout.col#line-footer1": {
+    "children": ["rich-text#localization-1"],
+    "props": {
+      "width": "70%"
+    }
+  },
+
+  "rich-text#localization-1": {
+    "props": {
+      "text": "Freeway Factory Store | Rua Ezio Pucci, 2951- Distrito Industrial Antonio Della - Torre - CEP: 14406-­078 • Franca / SP • Brasil",
+      "blockClass": "row-footer-text"
+    }
+  },
+
+  "flex-layout.col#line-footer2": {
+    "children": ["flex-layout.row#footer-row"],
+    "props": {
+      "width": "30%"
+    }
+  },
+
+  "flex-layout.row#footer-row": {
+    "children": ["rich-text#localization-2", "rich-text#localization-3"],
+    "props": {
+      "fullWidth": true,
+      "horizontalAlign": "right"
+    }
+  },
+  "rich-text#localization-2": {
+    "props": {
+      "text": "Desenvolvimento: Corebiz",
+      "blockClass": "row-footer-text2"
+    }
+  },
+  "rich-text#localization-3": {
+    "props": {
+      "text": "Tecnologia: VTEX",
+      "blockClass": "row-footer-text3"
+    }
+  }
 }
