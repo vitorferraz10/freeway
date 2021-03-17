@@ -14,8 +14,93 @@
     ]
   },
   "header-layout.mobile": {
-    "children": []
+    "children": ["flex-layout.row#menu-mobile-line-1", "flex-layout.row#menu-mobile-line-2"],
+    "props": {
+      "blockClass": "header-mobile"
+    }
   },
+ 
+  "flex-layout.row#menu-mobile-line-1": {
+    "children": ["flex-layout.row#logo-mobile", "flex-layout.row#items-mobile"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "row-mobile-line-1", 
+     " preserveLayoutOnMobile": true
+    }
+  },
+
+  "flex-layout.row#logo-mobile": {
+    "children": ["logo#mobile"],
+    "props": {
+      "blockClass": "row-logo-mobile", 
+      " preserveLayoutOnMobile": true
+    }
+  },
+
+  "logo#mobile": {
+    "props": {
+      "title": "logo-mobile",
+      "href": "assets/logo.png",
+      "url": "assets/logo.png",
+      "width": "170px",
+      "heigth": "44px",
+      "blockClass": "logo-mobile"
+    }
+  },
+  "flex-layout.row#items-mobile": {
+    "children": [
+      "image#help-mobile",
+      "image#cart-mobile",
+      "image#click-menu-mobile"
+    ], 
+    "props": {
+      "blockClass": "items-mobile", 
+      "horizontalAlign": "center",
+      " preserveLayoutOnMobile": true
+    }
+  },
+  "image#help-mobile": {
+    "props": {
+      "src": "assets/ico-help.png",
+      "blockClass": "ico-header-mobile",
+      "maxWidth": "32px",
+      "maxHeigth": "32px"
+    }
+    },
+  
+  "image#cart-mobile": {
+    "props": {  
+      "src": "assets/ico-cart.png",
+      "blockClass": "ico-header-mobile",
+      "maxWidth": "32px",
+      "maxHeigth": "32px"
+    }
+    },
+  "image#click-menu-mobile": {
+    "props": {
+      "src": "assets/ico-menu.png",
+      "blockClass": "ico-header-mobile",
+      "maxWidth": "32px",
+      "maxHeigth": "32px"
+    }
+  },
+
+  "flex-layout.row#menu-mobile-line-2": {
+    "children": ["search-bar#header-busca-mobile"], 
+    "props": {
+      "blockClass": "search-bar-header-mobile", 
+      " preserveLayoutOnMobile": true
+    }
+  },
+
+  "search-bar#header-busca-mobile": {
+    "props": {
+      "blockClass": "search-bar-header-mobile",
+      "openAutocompleteOnFocus": true,
+      "placeholder": "O que procura hoje?"
+    }
+  },
+
 
   "flex-layout.row#header-desk": {
     "children": [
@@ -54,10 +139,10 @@
     }
   },
   "search-bar#header-busca": {
-  
     "props": {
       "blockClass": "search-bar-header",
-      "openAutocompleteOnFocus": true
+      "openAutocompleteOnFocus": true,
+      "placeholder": "O que procura hoje?"
     }
   },
 
@@ -90,7 +175,7 @@
         "href": "#",
         "noFollow": false,
         "tagTitle": "Ajuda",
-        "text": "Ajuda" 
+        "text": "Ajuda"
       }
     }
   },
@@ -119,7 +204,7 @@
   },
 
   "flex-layout.row#line-down-header": {
-    "children": ["vtex.menu@2.x:menu#down-header"], 
+    "children": ["vtex.menu@2.x:menu#down-header"],
     "props": {
       "blockClass": "menu-down-header"
     }
@@ -133,7 +218,7 @@
       "menu-item#down-header-item-5",
       "menu-item#down-header-item-6",
       "menu-item#down-header-item-7"
-    ], 
+    ],
     "props": {
       "blockClass": "items-header-1",
       "horizontalAlign": "center"
@@ -167,8 +252,208 @@
         "tagTitle": "MASCULINO",
         "text": "MASCULINO"
       }
+    },
+    "blocks": ["vtex.menu@2.x:submenu#shop-masculino"]
+  },
+  "vtex.menu@2.x:submenu#shop-masculino": {
+    "children": ["flex-layout.row#sub-menu-masculino-desk"],
+    "props": {
+      "width": "100%",
+      "blockClass": "shop-submenu"
     }
   },
+  "flex-layout.row#sub-menu-masculino-desk": {
+    "children": ["vtex.menu@2.x:menu#masculino"],
+    "props": {
+      "blockClass": "row-submenu-header"
+    }
+  },
+  "vtex.menu@2.x:menu#masculino": {
+    "children": [
+      "menu-item#submenu-masculino-desk-1",
+      "menu-item#submenu-masculino-desk-2",
+      "menu-item#submenu-masculino-desk-3",
+      "menu-item#submenu-masculino-desk-4",
+      "menu-item#submenu-masculino-desk-5",
+      "menu-item#submenu-masculino-desk-6",
+      "menu-item#submenu-masculino-desk-7",
+      "menu-item#submenu-masculino-desk-4",
+      "menu-item#submenu-masculino-desk-5",
+      "menu-item#submenu-masculino-desk-6",
+      "menu-item#submenu-masculino-desk-7"
+    ],
+    "props": {
+      "orientation": "horizontal",
+      "maxWidth": "100%"
+    }
+  },
+  "menu-item#submenu-masculino-desk-1": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Botas",
+        "text": "Botas"
+      }
+    }
+  },
+
+  "menu-item#submenu-masculino-desk-2": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Mocassim",
+        "text": "Mocassim"
+      }
+    }
+  },
+  "menu-item#submenu-masculino-desk-3": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Sapatos",
+        "text": "Sapatos"
+      }
+    }
+  },
+  "menu-item#submenu-masculino-desk-4": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Tênis Casual",
+        "text": "Tênis Casual"
+      }
+    }
+  },
+  "menu-item#submenu-masculino-desk-5": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Sapatênis",
+        "text": "Sapatênis"
+      }
+    }
+  },
+  "menu-item#submenu-masculino-desk-6": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Sider",
+        "text": "Sider"
+      }
+    }
+  },
+  "menu-item#submenu-masculino-desk-7": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Chinelo",
+        "text": "Chinelo"
+      }
+    }
+  },
+  "menu-item#submenu-masculino-desk-8": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Sandália",
+        "text": "Sandália"
+      }
+    }
+  },
+  "menu-item#submenu-masculino-desk-9": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Sapatilha",
+        "text": "Sapatilha"
+      }
+    }
+  },
+  "menu-item#submenu-masculino-desk-10": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Tamanhos Grandes",
+        "text": "Tamanhos Grandes"
+      }
+    }
+  },
+  "menu-item#submenu-masculino-desk-11": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Kits",
+        "text": "Kits"
+      }
+    }
+  },
+
   "menu-item#down-header-item-3": {
     "props": {
       "blockClass": "items-header-down-p",
@@ -181,6 +466,94 @@
         "noFollow": false,
         "tagTitle": "FEMININO",
         "text": "FEMININO"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu#shop-feminino"]
+  },
+
+  "vtex.menu@2.x:submenu#shop-feminino": {
+    "children": ["flex-layout.row#sub-menu-feminino"],
+    "props": {
+      "width": "100%",
+      "blockClass": "shop-submenu"
+    }
+  },
+
+  "flex-layout.row#sub-menu-feminino": {
+    "children": ["vtex.menu@2.x:menu#shop-feminino"],
+    "props": {
+      "blockClass": "flex-sub-menu"
+    }
+  },
+
+  "vtex.menu@2.x:menu#shop-feminino": {
+    "children": [
+      "menu-item#submenu-feminino-desk-1",
+      "menu-item#submenu-feminino-desk-2",
+      "menu-item#submenu-feminino-desk-3",
+      "menu-item#submenu-feminino-desk-4"
+    ],
+    "props": {
+      "blockClass": "flex-sub-menu"
+    }
+  },
+  "menu-item#submenu-feminino-desk-1": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Sapatilha",
+        "text": "Sapatilha"
+      }
+    }
+  },
+  "menu-item#submenu-feminino-desk-2": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Bota Feminina",
+        "text": "Bota Feminina"
+      }
+    }
+  },
+  "menu-item#submenu-feminino-desk-3": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Tênis Feminino",
+        "text": "Tênis Feminino"
+      }
+    }
+  },
+  "menu-item#submenu-feminino-desk-4": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Mocassim Feminino",
+        "text": "Mocassim Feminino"
       }
     }
   },
@@ -197,10 +570,95 @@
         "tagTitle": "ACESSÓRIOS",
         "text": "ACESSÓRIOS"
       }
+    },
+    "blocks": ["vtex.menu@2.x:submenu#shop-acessorios"]
+  },
+
+  "vtex.menu@2.x:submenu#shop-acessorios": {
+    "children": ["flex-layout.row#sub-menu-acessorios"],
+    "props": {
+      "width": "100%",
+      "blockClass": "shop-submenu"
     }
-  }, 
+  },
+  "flex-layout.row#sub-menu-acessorios": {
+    "children": ["vtex.menu@2.x:menu#shop-acessorios"],
+    "props": {
+      "blockClass": "flex-sub-menu"
+    }
+  },
+  "vtex.menu@2.x:menu#shop-acessorios": {
+    "children": [
+      "menu-item#submenu-acessórios-desk-1",
+      "menu-item#submenu-acessórios-desk-2",
+      "menu-item#submenu-acessórios-desk-3",
+      "menu-item#submenu-acessórios-desk-4"
+    ]
+  },
+
+  "menu-item#submenu-acessórios-desk-1": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Carteira",
+        "text": "Carteira"
+      }
+    }
+  },
+
+  "menu-item#submenu-acessórios-desk-2": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Cintos",
+        "text": "Cintos"
+      }
+    }
+  },
+  "menu-item#submenu-acessórios-desk-3": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Cintos Feminino",
+        "text": "Cintos Feminino"
+      }
+    }
+  },
+  "menu-item#submenu-acessórios-desk-4": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Meias",
+        "text": "Meias"
+      }
+    }
+  },
   "menu-item#down-header-item-5": {
-    "props":{
+    "props": {
       "blockClass": "items-header-down-p",
       "id": "down-header-item-5",
       "type": "custom",
@@ -212,10 +670,77 @@
         "tagTitle": "ARTIGOS PARA VIAGEM",
         "text": "ARTIGOS PARA VIAGEM"
       }
+    },
+    "blocks": ["vtex.menu@2.x:submenu#shop-artigos-viagem"]
+  },
+  "vtex.menu@2.x:submenu#shop-artigos-viagem": {
+    "children": ["flex-layout.row#submenu-artigos-viagem"],
+    "props": {
+      "width": "100%",
+      "blockClass": "shop-submenu"
     }
-  }, 
+  },
+
+  "flex-layout.row#submenu-artigos-viagem": {
+    "children": ["vtex.menu@2.x:menu#shop-artigos-viagem"]
+  },
+
+  "vtex.menu@2.x:menu#shop-artigos-viagem": {
+    "children": [
+      "menu-item#submenu-artigos-viagem-desk-1",
+      "menu-item#submenu-artigos-viagem-desk-2",
+      "menu-item#submenu-artigos-viagem-desk-3"
+    ]
+  },
+
+  "menu-item#submenu-artigos-viagem-desk-1": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Mochilas",
+        "text": "Mochilas"
+      }
+    }
+  },
+  "menu-item#submenu-artigos-viagem-desk-2": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Malas",
+        "text": "Malas"
+      }
+    }
+  },
+  "menu-item#submenu-artigos-viagem-desk-3": {
+    "props": {
+      "blockClass": "items-submenu",
+      "id": "items-submenu",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Necessaires",
+        "text": "Necessaires"
+      }
+    }
+  },
+
   "menu-item#down-header-item-6": {
-    "props":{
+    "props": {
       "blockClass": "items-header-down-p",
       "id": "down-header-item-6",
       "type": "custom",
@@ -228,9 +753,9 @@
         "text": "ULTRA COMFORT"
       }
     }
-  }, 
+  },
   "menu-item#down-header-item-7": {
-    "props":{
+    "props": {
       "blockClass": "items-header-down-p-orange",
       "id": "down-header-item-7",
       "type": "custom",

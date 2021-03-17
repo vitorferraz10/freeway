@@ -6,7 +6,8 @@
       "flex-layout.row#shelf-home",
       "flex-layout.row#images-container",
       "flex-layout.row#shelf-home-2",
-      "flex-layout.row#images-trio-banner",
+      "responsive-layout.desktop",
+      "responsive-layout.mobile",
       "flex-layout.row#sub-marcas",
       "flex-layout.row#banner-down-submarcas",
       "flex-layout.row#shelf-home-3",
@@ -48,7 +49,7 @@
       "flex-layout.row#child-shipping",
       "flex-layout.row#child-exchange"
     ],
-    "props": {  
+    "props": {
       "blockClass": "home-info",
       "fullWidth": true,
       "horizontalAlign": "center",
@@ -66,8 +67,8 @@
   "flex-layout.row#child-card": {
     "children": ["image#card", "rich-text#card"],
     "props": {
-      "blockClass": "row-child", 
-      "preventHorizontalStretch": true, 
+      "blockClass": "row-child",
+      "preventHorizontalStretch": true,
       "horizontalAlign": "center"
     }
   },
@@ -82,7 +83,7 @@
 
     "props": {
       "blockClass": "row-child",
-      "preventHorizontalStretch": true, 
+      "preventHorizontalStretch": true,
       "horizontalAlign": "center"
     }
   },
@@ -105,7 +106,7 @@
     "children": ["image#exchange", "rich-text#exchange"],
     "props": {
       "blockClass": "row-child",
-      "preventHorizontalStretch": true, 
+      "preventHorizontalStretch": true,
       "horizontalAlign": "center"
     }
   },
@@ -148,7 +149,7 @@
         "phone": 1
       },
       "blockClass": "shelf-vitrine",
-      "infinite": true, 
+      "infinite": true,
       "maxWidth": "1318px",
       "max-height": "452px"
     }
@@ -166,9 +167,8 @@
     ],
     "props": {
       "blockClass": "images-container",
-      "preventHorizontalStretch": true, 
+      "preventHorizontalStretch": true,
       "maxWidth": "1318px"
-             
     }
   },
 
@@ -176,7 +176,6 @@
     "children": ["image#container-image"],
     "props": {
       "blockClass": "container-main"
-      
     }
   },
 
@@ -186,15 +185,13 @@
       "blockClass": "container-image",
       "height": "600px",
       "width": "656px"
-     
     }
   },
   "flex-layout.col#col-container": {
     "children": ["image#flex-1", "image#flex-2"],
     "props": {
       "blockClass": "container-imagem-flex",
-      "horizontalAlign": "center" 
-      
+      "horizontalAlign": "center"
     }
   },
 
@@ -202,7 +199,7 @@
     "props": {
       "src": "assets/image-flex1.png",
       "height": "284px",
-      "width": "630px", 
+      "width": "630px",
       "blockClass": "img-flex1"
     }
   },
@@ -215,7 +212,7 @@
     }
   },
   "flex-layout.row#shelf-home-2": {
-    "children": ["flex-layout.col#shelf-home-2"], 
+    "children": ["flex-layout.col#shelf-home-2"],
     "props": {
       "maxWidth": "1318px"
     }
@@ -253,6 +250,32 @@
       "text": "Mais **vendidos**"
     }
   },
+  "responsive-layout.desktop": {
+    "children": ["flex-layout.row#images-trio-banner"]
+    },
+    "responsive-layout.mobile": {
+    "children": ["slider-layout#trio-images"], 
+    "props": {
+      "blockClass": "slider-trio-images"
+    }
+    },
+
+    "slider-layout#trio-images": {
+      "props": {
+        "itemsPerPage": {         
+          "tablet": 2,
+          "phone": 1
+        },
+        "infinite": true,
+        "showNavigationArrows": "desktopOnly",
+        "blockClass": "carousel-trio-images-mobile"
+      }, 
+      "children": [
+        "image#trio-banner1",
+       "image#trio-banner2",
+        "image#trio-banner3"
+      ]
+    },
 
   "flex-layout.row#images-trio-banner": {
     "children": [
@@ -263,7 +286,7 @@
     "props": {
       "blockClass": "images-trio-banner",
       "colGap": 4,
-      "colSizing": "equal", 
+      "colSizing": "equal",
       "maxWidth": "1318px"
     }
   },
@@ -292,7 +315,7 @@
   "flex-layout.row#sub-marcas": {
     "children": ["image#sub-marcas"],
     "props": {
-      "blockClass": "row-sub-marcas", 
+      "blockClass": "row-sub-marcas",
       "maxWidth": "1318px"
     }
   },
@@ -309,7 +332,7 @@
   "flex-layout.row#banner-down-submarcas": {
     "children": ["image#banner-down-submarcas"],
     "props": {
-      "blockClass": "banner-down-submarcas", 
+      "blockClass": "banner-down-submarcas",
       "maxWidth": "1318px"
     }
   },
@@ -349,7 +372,7 @@
         "phone": 1
       },
       "blockClass": "shelf-vitrine",
-      "infinite": true, 
+      "infinite": true,
       "maxWidth": "1318px"
     }
   },
@@ -392,55 +415,71 @@
     }
   },
 
-    "newsletter#info": {
-      "props": {
-        "placeholder": "Digite seu e-mail",
-        "submit": "Cadastrar",
-        "hideLabel": true,
-        "blockClass": "newsletter-form"
-      }
-    },
+  "newsletter#info": {
+    "props": {
+      "placeholder": "Digite seu e-mail",
+      "submit": "Cadastrar",
+      "hideLabel": true,
+      "blockClass": "newsletter-form"
+    }
+  },
 
-    "flex-layout.row#departamentos": {
+  "flex-layout.row#departamentos": {
     "children": [
-      "image#flex-column-1",
-      "image#flex-column-2",
-      "image#flex-column-3", 
-      "image#flex-column-4"
+      "flex-layout.row#departamentos-row1",
+      "flex-layout.row#departamentos-row2"
     ],
+    "props": {
+      "blockClass": "images-for-banner-main",
+      "colGap": 4,
+      "colSizing": "equal",
+      "maxWidth": "1317px"
+    }
+  },
+
+  "flex-layout.row#departamentos-row1": {
+    "children": ["image#flex-column-1", "image#flex-column-2"],
     "props": {
       "blockClass": "images-for-banner",
       "colGap": 4,
-      "colSizing": "equal", 
-      "maxWidth": "1317px"
+      "colSizing": "equal"
+    }
+  },
+
+  "flex-layout.row#departamentos-row2": {
+    "children": ["image#flex-column-3", "image#flex-column-4"],
+    "props": {
+      "blockClass": "images-for-banner",
+      "colGap": 4,
+      "colSizing": "equal"
     }
   },
 
   "image#flex-column-1": {
     "props": {
       "src": "assets/masculino.png",
-      "maxWidth": "100%",
+      
       "blockClass": "image-for"
     }
   },
   "image#flex-column-2": {
     "props": {
       "src": "assets/feminino.png",
-      "maxWidth": "100%",
+      
       "blockClass": "image-for"
     }
   },
   "image#flex-column-3": {
     "props": {
       "src": "assets/acessorios.png",
-      "maxWidth": "100%",
+      
       "blockClass": "image-for"
     }
-  }, 
+  },
   "image#flex-column-4": {
     "props": {
       "src": "assets/viagem.png",
-      "maxWidth": "100%",
+      
       "blockClass": "image-for"
     }
   },
@@ -448,7 +487,7 @@
   "flex-layout.row#layer": {
     "children": ["rich-text#left", "rich-text#right"],
     "props": {
-      "blockClass": "layer", 
+      "blockClass": "layer",
       "preventHorizontalStretch": true
     }
   },
@@ -456,14 +495,12 @@
     "props": {
       "text": "A FREEWAY",
       "blockClass": "text-left-layer"
-      
     }
   },
   "rich-text#right": {
     "props": {
       "blockClass": "text-right-layer",
       "text": "A Freeway é uma marca de calçados masculinos que une qualidade, sustentabilidade, tecnologia e moda, oferecendo<br> muito mais do que calçados. Além de Casual Boots, Casual Shoes, Siders, Bags, Necessaires e Cintos, você encontra aqui<br>inúmeros diferenciais, que proporcionam uma sensação única e fazem do “caminhar” uma experiência sem igual. Conforto<br> térmico, acabamento manual, solado com até 30% de material reciclado, produtos em couro, 27 medidas diferentes de<br> forma para acomodar seu pé, e é claro, o exclusivo sistema EasyWear, que permite um calçar muito mais rápido, ajudam<br> você a levar uma vida mais leve e muito mais confortável!"
-
     }
   }
 }

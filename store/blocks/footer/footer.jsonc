@@ -13,84 +13,276 @@
   },
 
   "footer-layout.mobile": {
-    "children": ["flex-layout.row#footer-mobile"],
+    "children": [
+      "flex-layout.row#footer-mobile",
+      "flex-layout.row#down-footer-mobile-2"
+    ],
     "props": {
-      "maxWidth": "767px"
+      "blockClass": "footer-mobile"
     }
   },
   "flex-layout.row#footer-mobile": {
     "children": ["flex-layout.col#footer-mobile"],
     "props": {
-      "maxWidth": "767px",
-      "maxHeigth": "250px"
+      "blockClass": "line-footer-mobile"
     }
   },
   "flex-layout.col#footer-mobile": {
     "children": [
-      "flex-layout.row#line-1",
-      "flex-layout.row#line-2",
-      "flex-layout.row#line-3",
-      "flex-layout.row#line-4"
-    ]
-  },
-  "flex-layout.row#line-1": {
-    "children": ["rich-text#line-1-footer-Mobile", "image#option-submenu"],
+      "flex-layout.row#line-1-mobile",
+      "flex-layout.row#line-2-mobile",
+      "flex-layout.row#line-3-mobile",
+      "flex-layout.row#line-4-mobile"
+    ],
     "props": {
-      "blockClass": "line-header"
+      "blockClass": "col-footer-mobile"
+    }
+  },
+  "flex-layout.row#line-1-mobile": {
+    "children": [
+      "flex-layout.col#footer-mobile-1",
+      "flex-layout.col#footer-mobile-img-click"
+    ],
+    "props": {
+      "blockClass": "line-footer"
+    }
+  },
+  "flex-layout.col#footer-mobile-1": {
+    "children": ["rich-text#line-1-footer-mobile"],
+    "props": {
+      "blockClass": "col-2-text"
     }
   },
 
-  "rich-text#line-1-footer-Mobile": {
+  "rich-text#line-1-footer-mobile": {
     "props": {
-      "text": "**Institucional**"
+      "text": "**Institucional**",
+      "blockClass": "text-footer-mobile"
     }
   },
+
+  "flex-layout.col#footer-mobile-img-click": {
+    "children": ["image#option-submenu"],
+    "props": {
+      "blockClass": "div-img",
+      "horizontalAlign": "right"
+    }
+  },
+
   "image#option-submenu": {
     "props": {
       "src": "assets/+.png",
       "max-width": "24px",
+      "maxHeight": "24px",
+      "blockClass": "img-click"
+    }
+  },
+  "flex-layout.row#line-2-mobile": {
+    "children": [
+      "flex-layout.col#footer-mobile-line-2-text",
+      "flex-layout.col#footer-mobile-line-2-img"
+    ],
+    "props": {
+      "blockClass": "line-footer"
+    }
+  },
+  "flex-layout.col#footer-mobile-line-2-text": {
+    "children": ["rich-text#line-2-footer-mobile"]
+  },
+
+  "rich-text#line-2-footer-mobile": {
+    "props": {
+      "text": "**Atendimento**",
+      "blockClass": "text-footer-mobile"
+    }
+  },
+  "flex-layout.col#footer-mobile-line-2-img": {
+    "children": ["image#option-submenu"],
+    "props": {
+      "horizontalAlign": "right"
+    }
+  },
+
+  "flex-layout.row#line-3-mobile": {
+    "children": [
+      "flex-layout.col#footer-mobile-line-3-text",
+      "flex-layout.col#footer-mobile-line-3-img"
+    ],
+    "props": {
+      "blockClass": "line-footer"
+    }
+  },
+
+  "flex-layout.col#footer-mobile-line-3-text": {
+    "children": ["rich-text#line-3-footer-mobile"]
+  },
+  "rich-text#line-3-footer-mobile": {
+    "props": {
+      "text": "**Formas de pagamento**",
+      "blockClass": "text-footer-mobile"
+    }
+  },
+  "flex-layout.col#footer-mobile-line-3-img": {
+    "children": ["image#option-submenu"],
+    "props": {
+      "horizontalAlign": "right"
+    }
+  },
+
+  "flex-layout.row#line-4-mobile": {
+    "children": [
+      "flex-layout.col#footer-col4-mobile",
+      "flex-layout.col#footer-col5-mobile"
+    ],
+    "props": {
+      "blockClass": "footer-mobile-images"
+    }
+  },
+  "flex-layout.col#footer-col4-mobile": {
+    "children": [
+      "rich-text#social-network-title",
+      "vtex.menu@2.x:menu#footer-menu-4-mobile"
+    ],
+    "props": {
+      "blockClass": "footer-col-4"
+    }
+  },
+  "rich-text#social-network-title-mobile-mobile": {
+    "props": {
+      "text": "**Redes sociais**",
+      "blockClass": "text-menu-footer"
+    }
+  },
+
+  "vtex.menu@2.x:menu#footer-menu-4-mobile": {
+    "children": ["flex-layout.row#redes-sociais"],
+    "props": {
+      "blockClass": "medias-socias-footer-mobile",
+      "orientation": "vertical", 
+      "horizontalAlign": "right"
+    }
+  },
+  "flex-layout.row#redes-sociais-mobile": {
+    "children": [
+      "image#social-1",
+      "image#social-2",
+      "image#social-3",
+      "image#social-4"
+    ],
+    "props": {
+      "blockClass": "midias-sociais"
+    }
+  },
+  "image#social-1-mobile": {
+    "props": {
+      "src": "assets/ico-facebook.png",
+      "width": "24px",
+      "blockClass": "img-mobile-sociais"
+    }
+  },
+  "image#social-2-mobile": {
+    "props": {
+      "src": "assets/ico-instagram.png",
+      "width": "24px",
+      "blockClass": "img-mobile-sociais"
+    }
+  },
+  "image#social-3-mobile": {
+    "props": {  
+      "src": "assets/ico-twitter.png",
+      "width": "24px",
+      "blockClass": "img-mobile-sociais"
+    }
+  },
+  "image#social-4-mobile": {
+    "props": {
+      "src": "assets/ico-youtube.png",
+      "width": "24px",
+      "blockClass": "img-mobile-sociais"
+    }
+  },
+
+  "flex-layout.col#footer-col5-mobile": {
+    "children": ["rich-text#security", "flex-layout.row#img-security"],
+    "props": {
+      "blockClass": "footer-col-4",
+      "orientation": "vertical",
+      "horizontalAlign": "left"
+
+    }
+  },
+  "rich-text#security-mobile": {
+    "props": {
+      "text": "**Segurança**",
+      "blockClass": "text-menu-footer"
+    }
+  },
+
+  "flex-layout.row#img-security-mobile": {
+    "children": ["image#security-1", "image#security-2"],
+    "props": {
+      "width": "102px",
+      "blockClass": "img-security"
+    }
+  },
+
+  "image#security-1-mobile": {
+    "props": {
+      "src": "assets/security-1.png",
+      "maxWidth": "38px",
       "maxHeight": "24px"
     }
   },
-  "flex-layout.row#line-2": {
-    "children": ["rich-text#line-2-footer-Mobile", "image#option-submenu"],
+  "image#security-2-mobile": {
     "props": {
-      "blockClass": "line-header"
+      "src": "assets/security-2.png",
+      "maxWidth": "38px",
+      "maxHeight": "24px"
     }
   },
 
-  "rich-text#line-2-footer-Mobile": {
-    "props": {
-      "text": "Atendimento"
-    }
-  },
-  "flex-layout.row#line-3": {
-    "children": ["rich-text#line-3-footer-Mobile", "image#option-submenu"],
-    "props": {
-      "blockClass": "line-header"
-    }
-  },
-  "rich-text#line-3-footer-Mobile": {
-    "props": {
-      "text": "Formas de pagamento"
-    }
-  },
-  "flex-layout.row#line-4": {
-    "children": ["flex-layout.col#footer-col4", "flex-layout.col#footer-col5"],
-    "props": {
-      "blockClass": "footer-mobile-line-4"
-    }
-  },
-
-  "flex-layout.col#line-down-foote-mobile": {
+  "flex-layout.row#down-footer-mobile-2": {
     "children": [
-      "flex-layout.row#line-1-down-footer",
-      "flex-layout.row#line-2-down-footer"
+      "flex-layout.row#line-1-line-down-footer",
+      "flex-layout.row#line-2-line-down-footer"
     ],
     "props": {
-      "blockClass": "down-footer",
-      "maxWidth": "767px",
-      "maxHeight": "100.29px"
+      "blockClass": "line-down-footer",
+      "maxHeight": "100.29px",
+      "preventHorizontalStretch": true
+    }
+  },
+  "flex-layout.row#line-1-line-down-footer": {
+    "children": ["rich-text#adress-footer-mobile"],
+    "props": {
+      "blockClass": "line-1-line-down-footer",
+      "width": "507px"
+    }
+  },
+  "rich-text#adress-footer-mobile": {
+    "props": {
+      "text": "Freeway Factory Store | Rua Ezio Pucci, 2951- Distrito Industrial Antonio Della - Torre - CEP: 14406-­078 • Franca / SP • Brasil",
+      "blockClass": "text-adress"
+    }
+  },
+  "flex-layout.row#line-2-line-down-footer": {
+    "children": ["rich-text#corebiz-footer", "rich-text#vtex-footer"],
+    "props": {
+      "preventHorizontalStretch": true, 
+      "blockClass": "text-down-footer"
+    }
+  },
+
+  "rich-text#corebiz-footer": {
+    "props": {
+      "text": "Desenvolvimento: **Corebiz**",
+      "blockClass": "text-down-footer-1"
+    }
+  },
+  "rich-text#vtex-footer": {
+    "props": {
+      "text": "Tecnologia: **VTEX**",
+      "blockClass": "text-down-footer-2"
     }
   },
 
@@ -122,6 +314,8 @@
     }
   },
 
+
+  /*DESKTOP*/
   "flex-layout.row#footer-desktop": {
     "children": [
       "flex-layout.col#footer-col1",
@@ -140,7 +334,8 @@
     "children": ["rich-text#title-col1", "vtex.menu@2.x:menu#footer-menu"],
     "props": {
       "blockClass": "footer-col1",
-      "max-width": "1318px"
+      "max-width": "1318px" 
+      
     }
   },
 
@@ -161,7 +356,7 @@
       "menu-item#footer-col1-line-8"
     ],
     "props": {
-      "blockClass": "col-1-menu",
+      "blockClass": "footer-col1",
       "orientation": "vertical"
     }
   },
@@ -169,6 +364,7 @@
   "menu-item#footer-col1-line-2": {
     "props": {
       "id": "menu-item-line-2",
+      "blockClass": "items-menu-footer-desk",
       "type": "custom",
       "highlight": false,
       "itemProps": {
@@ -184,6 +380,7 @@
   "menu-item#footer-col1-line-3": {
     "props": {
       "id": "menu-item-line-3",
+      "blockClass": "items-menu-footer-desk",
       "type": "custom",
       "highlight": false,
       "itemProps": {
@@ -198,6 +395,7 @@
   "menu-item#footer-col1-line-4": {
     "props": {
       "id": "menu-item-line-4",
+      "blockClass": "items-menu-footer-desk",
       "type": "custom",
       "highlight": false,
       "itemProps": {
@@ -212,6 +410,7 @@
   "menu-item#footer-col1-line-5": {
     "props": {
       "id": "menu-item-line-5",
+      "blockClass": "items-menu-footer-desk",
       "type": "custom",
       "highlight": false,
       "itemProps": {
@@ -226,6 +425,7 @@
   "menu-item#footer-col1-line-6": {
     "props": {
       "id": "menu-item-line-6",
+      "blockClass": "items-menu-footer-desk",
       "type": "custom",
       "highlight": false,
       "itemProps": {
@@ -241,6 +441,7 @@
   "menu-item#footer-col1-line-7": {
     "props": {
       "id": "menu-item-line-7",
+      "blockClass": "items-menu-footer-desk",
       "type": "custom",
       "highlight": false,
       "itemProps": {
@@ -255,6 +456,7 @@
   "menu-item#footer-col1-line-8": {
     "props": {
       "id": "menu-item-line-8",
+      "blockClass": "items-menu-footer-desk",
       "type": "custom",
       "highlight": false,
       "itemProps": {
@@ -294,6 +496,7 @@
   "menu-item#footer-col2-line-2": {
     "props": {
       "id": "menu-item-col2-line-2",
+      "blockClass": "items-menu-footer-desk",
       "type": "custom",
       "highlight": false,
       "itemProps": {
@@ -309,6 +512,7 @@
     "props": {
       "id": "menu-item-col2-line-3",
       "type": "custom",
+      "blockClass": "items-menu-footer-desk",
       "highlight": false,
       "itemProps": {
         "type": "internal",
@@ -322,6 +526,7 @@
   "menu-item#footer-col2-line-4": {
     "props": {
       "id": "menu-item-col2-line-4",
+      "blockClass": "items-menu-footer-desk",
       "type": "custom",
       "highlight": false,
       "itemProps": {
@@ -337,6 +542,7 @@
     "props": {
       "id": "menu-item-col2-line-5",
       "type": "custom",
+      "blockClass": "items-menu-footer-desk",
       "highlight": false,
       "itemProps": {
         "type": "internal",
@@ -532,14 +738,16 @@
     "props": {
       "src": "assets/security-1.png",
       "maxWidth": "48px",
-      "maxHeight": "30px"
+      "maxHeight": "30px",
+      "blockClass": "img-security"
     }
   },
   "image#security-2": {
     "props": {
       "src": "assets/security-2.png",
       "maxWidth": "48px",
-      "maxHeight": "30px"
+      "maxHeight": "30px", 
+      "blockClass": "img-security"
     }
   },
   "flex-layout.row#footer-localization": {

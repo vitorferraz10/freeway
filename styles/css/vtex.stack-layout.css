@@ -1,5 +1,13 @@
+@media only screen and (min-device-width : 768px){
 
-.stackContainer--container-main{
-    margin-right: 32px;
-    
+    .stackContainer--container-main{
+        margin-right: 32px;
+        
+    }
+}
+@media only screen and (min-device-width : 768px){
+
+   /*  .stackContainer--container-main{
+        margin: 0;
+    } */
 }
