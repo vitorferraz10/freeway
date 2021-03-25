@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "global": "^4.4.0",
+    "sass": "^1.32.8"
+  }, 
+  "name": "free", 
+  "scripts": {
+    "sass": "sass --no-source-map --watch styles/scss:styles/css styles/configs/font-faces:styles/configs --style compressed"
+  },
+  "version": "1.0", 
+  "main": "index.js"
+}

@@ -14,25 +14,28 @@
     ]
   },
   "header-layout.mobile": {
-    "children": ["flex-layout.row#menu-mobile-line-1", "flex-layout.row#menu-mobile-line-2"],
+    "children": [
+      "flex-layout.row#menu-mobile-line-1",
+      "flex-layout.row#menu-mobile-line-2"
+    ],
     "props": {
       "blockClass": "header-mobile"
     }
   },
- 
+
   "flex-layout.row#menu-mobile-line-1": {
     "children": ["flex-layout.row#logo-mobile", "flex-layout.row#items-mobile"],
     "props": {
       "preventHorizontalStretch": true,
-      "blockClass": "row-mobile-line-1", 
-     " preserveLayoutOnMobile": true
+      "blockClass": "row-mobile-line-1",
+      " preserveLayoutOnMobile": true
     }
   },
 
   "flex-layout.row#logo-mobile": {
     "children": ["logo#mobile"],
     "props": {
-      "blockClass": "row-logo-mobile", 
+      "blockClass": "row-logo-mobile",
       " preserveLayoutOnMobile": true
     }
   },
@@ -40,7 +43,7 @@
   "logo#mobile": {
     "props": {
       "title": "logo-mobile",
-      "href": "assets/logo.png",
+      "href": "/",
       "url": "assets/logo.png",
       "width": "170px",
       "heigth": "44px",
@@ -52,11 +55,12 @@
       "image#help-mobile",
       "image#cart-mobile",
       "image#click-menu-mobile"
-    ], 
+    ],
     "props": {
-      "blockClass": "items-mobile", 
+      "blockClass": "items-mobile",
       "horizontalAlign": "center",
-      " preserveLayoutOnMobile": true
+      " preserveLayoutOnMobile": true,
+      "width": "150px"
     }
   },
   "image#help-mobile": {
@@ -66,16 +70,16 @@
       "maxWidth": "32px",
       "maxHeigth": "32px"
     }
-    },
-  
+  },
+
   "image#cart-mobile": {
-    "props": {  
+    "props": {
       "src": "assets/ico-cart.png",
       "blockClass": "ico-header-mobile",
       "maxWidth": "32px",
       "maxHeigth": "32px"
     }
-    },
+  },
   "image#click-menu-mobile": {
     "props": {
       "src": "assets/ico-menu.png",
@@ -86,9 +90,9 @@
   },
 
   "flex-layout.row#menu-mobile-line-2": {
-    "children": ["search-bar#header-busca-mobile"], 
+    "children": ["search-bar#header-busca-mobile"],
     "props": {
-      "blockClass": "search-bar-header-mobile", 
+      "blockClass": "search-bar-header-mobile",
       " preserveLayoutOnMobile": true
     }
   },
@@ -101,12 +105,12 @@
     }
   },
 
-
   "flex-layout.row#header-desk": {
     "children": [
       "flex-layout.row#logo",
       "flex-layout.row#busca",
-      "flex-layout.row#menu-header"
+      "flex-layout.row#menu-header",
+      "minicart.v2"
     ],
     "props": {
       "blockClass": "header-line",
@@ -155,28 +159,14 @@
   },
   "vtex.menu@2.x:menu#header": {
     "children": [
-      "menu-item#header-item-1",
-      "menu-item#header-item-2",
-      "image#card-header"
+       
+       "drawer#ajuda",
+       "login#header"/* ,
+        "image#card-header" */
     ],
     "props": {
       "blockClass": "items-header",
       "horizontalAlign": "center"
-    }
-  },
-  "menu-item#header-item-1": {
-    "props": {
-      "blockClass": "items-header-down-p",
-      "id": "header-item-1",
-      "type": "custom",
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "#",
-        "noFollow": false,
-        "tagTitle": "Ajuda",
-        "text": "Ajuda"
-      }
     }
   },
   "menu-item#header-item-2": {
@@ -194,14 +184,7 @@
       }
     }
   },
-  "image#card-header": {
-    "props": {
-      "src": "assets/cart.png",
-      "maxWidth": "32px",
-      "maxHeigth": "32px",
-      "blockClass": "img-cart-header"
-    }
-  },
+ 
 
   "flex-layout.row#line-down-header": {
     "children": ["vtex.menu@2.x:menu#down-header"],
@@ -237,6 +220,33 @@
         "tagTitle": "LANÇAMENTOS",
         "text": "LANÇAMENTOS"
       }
+    }, 
+    "blocks": ["vtex.menu@2.x:submenu#lancamentos"]
+  },
+  "vtex.menu@2.x:submenu#lancamentos": {
+    "children": ["flex-layout.row#sub-menu-lancamentos-desk"],
+    "props": {
+      "width": "100%",
+      "blockClass": "shop-submenu"/* , 
+      "orientation": "vertical" */
+    }
+  },
+  "flex-layout.row#sub-menu-lancamentos-desk": {
+    "children": ["vtex.menu@2.x:menu#lancamento"],
+    "props": {
+      "blockClass": "row-submenu-header"
+    }
+  },
+  "vtex.menu@2.x:menu#lancamento": {
+    "children": [
+      "vtex.menu@2.x:menu#masculino",
+      "vtex.menu@2.x:menu#shop-feminino", 
+      "vtex.menu@2.x:menu#shop-acessorios", 
+      "vtex.menu@2.x:menu#shop-artigos-viagem"
+    ],
+    "props": {
+      "orientation": "orizontal"
+
     }
   },
   "menu-item#down-header-item-2": {
@@ -245,7 +255,7 @@
       "id": "down-header-item-2",
       "type": "custom",
       "highlight": false,
-      "itemProps": {
+      "itemProps": {  
         "type": "internal",
         "href": "#",
         "noFollow": false,
@@ -256,18 +266,13 @@
     "blocks": ["vtex.menu@2.x:submenu#shop-masculino"]
   },
   "vtex.menu@2.x:submenu#shop-masculino": {
-    "children": ["flex-layout.row#sub-menu-masculino-desk"],
-    "props": {
-      "width": "100%",
-      "blockClass": "shop-submenu"
-    }
-  },
-  "flex-layout.row#sub-menu-masculino-desk": {
     "children": ["vtex.menu@2.x:menu#masculino"],
     "props": {
-      "blockClass": "row-submenu-header"
+      "blockClass": "shop-submenu", 
+      "width":"100%"
     }
   },
+  
   "vtex.menu@2.x:menu#masculino": {
     "children": [
       "menu-item#submenu-masculino-desk-1",
@@ -281,11 +286,12 @@
       "menu-item#submenu-masculino-desk-5",
       "menu-item#submenu-masculino-desk-6",
       "menu-item#submenu-masculino-desk-7"
-    ],
+    ], 
     "props": {
-      "orientation": "horizontal",
-      "maxWidth": "100%"
+      "orientation": "vertical"
+      
     }
+   
   },
   "menu-item#submenu-masculino-desk-1": {
     "props": {
@@ -472,14 +478,14 @@
   },
 
   "vtex.menu@2.x:submenu#shop-feminino": {
-    "children": ["flex-layout.row#sub-menu-feminino"],
+    "children": ["flex-layout.col#sub-menu-feminino"],
     "props": {
       "width": "100%",
       "blockClass": "shop-submenu"
     }
   },
 
-  "flex-layout.row#sub-menu-feminino": {
+  "flex-layout.col#sub-menu-feminino": {
     "children": ["vtex.menu@2.x:menu#shop-feminino"],
     "props": {
       "blockClass": "flex-sub-menu"
@@ -494,7 +500,8 @@
       "menu-item#submenu-feminino-desk-4"
     ],
     "props": {
-      "blockClass": "flex-sub-menu"
+      "blockClass": "flex-sub-menu", 
+      "orientation": "vertical"
     }
   },
   "menu-item#submenu-feminino-desk-1": {
@@ -575,13 +582,13 @@
   },
 
   "vtex.menu@2.x:submenu#shop-acessorios": {
-    "children": ["flex-layout.row#sub-menu-acessorios"],
+    "children": ["flex-layout.col#sub-menu-acessorios"],
     "props": {
       "width": "100%",
       "blockClass": "shop-submenu"
     }
   },
-  "flex-layout.row#sub-menu-acessorios": {
+  "flex-layout.col#sub-menu-acessorios": {
     "children": ["vtex.menu@2.x:menu#shop-acessorios"],
     "props": {
       "blockClass": "flex-sub-menu"
@@ -593,7 +600,10 @@
       "menu-item#submenu-acessórios-desk-2",
       "menu-item#submenu-acessórios-desk-3",
       "menu-item#submenu-acessórios-desk-4"
-    ]
+    ], 
+    "props": {
+      "orientation": "vertical"
+    }
   },
 
   "menu-item#submenu-acessórios-desk-1": {
@@ -674,14 +684,14 @@
     "blocks": ["vtex.menu@2.x:submenu#shop-artigos-viagem"]
   },
   "vtex.menu@2.x:submenu#shop-artigos-viagem": {
-    "children": ["flex-layout.row#submenu-artigos-viagem"],
+    "children": ["flex-layout.col#submenu-artigos-viagem"],
     "props": {
       "width": "100%",
       "blockClass": "shop-submenu"
     }
   },
 
-  "flex-layout.row#submenu-artigos-viagem": {
+  "flex-layout.col#submenu-artigos-viagem": {
     "children": ["vtex.menu@2.x:menu#shop-artigos-viagem"]
   },
 
@@ -690,7 +700,10 @@
       "menu-item#submenu-artigos-viagem-desk-1",
       "menu-item#submenu-artigos-viagem-desk-2",
       "menu-item#submenu-artigos-viagem-desk-3"
-    ]
+    ], 
+    "props": {
+      "orientation": "vertical"
+    }
   },
 
   "menu-item#submenu-artigos-viagem-desk-1": {

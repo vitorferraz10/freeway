@@ -1,0 +1,31 @@
+{
+    "login#header": {
+        
+        "props": {
+            "showIconProfile": false,
+            "hideIconLabel": false,
+            "optionsTitle": "Cadastrar | Login",
+            
+            "emailPlaceholder": "E-mail",
+            "passwordPlaceholder": "Senha",
+            "iconLabel": "Minha Conta",
+            "emailAndPasswordTitle": "Já tem cadastro? Faça seu login:",
+            "accessCodeTitle": "E-mail",
+           
+            "accountOptionsButtonBehavior": "popover",
+            "accountOptionLinks": [
+               {
+                    "label": "Minha Conta",
+                    "path": "/account",
+                    "cssClass": "accountOptionsSectionItem"
+                },
+                {
+                    "label": "Meus Pedidos",
+                    "path": "/account#/orders",
+                    "cssClass": "accountOptionsSectionItem"
+                }
+               
+            ]
+        }
+    }
+}

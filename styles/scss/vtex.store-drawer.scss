@@ -1,0 +1,44 @@
+.drawerHeader--drawer-ajuda{
+    background-color: #1d1d1b;
+    text-transform: uppercase;
+    justify-content: space-between;
+    max-width: 312px;
+    max-height: 58px;
+}
+.closeIcon{
+    color: #fff;
+}
+
+.drawerHeader :global(.vtex-rich-text-0-x-paragraph--menu-ajuda){
+    text-transform: uppercase;
+}
+
+.opened--drawe-ajuda-main{
+    max-width: 312px !important;
+    width: 100% !important;
+    max-height: 1106px !important;
+    height: 100%;
+
+}
+.drawerContent--drawe-ajuda-main{
+    height: 100%;
+}
+.closeIconButton {
+align-items: center;
+display: flex;
+margin-right: 1px;
+}
+.closeIconButton::before{
+    content: url("/arquivos/ico-arrow-right.png");
+   /*  display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.closeIcon{
+    visibility: hidden;
+    display: none;
+}
+
+:focus {
+    outline: none;
+}

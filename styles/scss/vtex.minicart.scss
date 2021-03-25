@@ -1,0 +1,26 @@
+.closeIconContainer--minicart{
+   background: #1d1d1b;
+} 
+.minicartTitle--minicart-base{
+    display: none;
+}
+
+.closeIconContainer--minicart{
+    display: flex;
+    justify-content: flex-end;
+}
+.closeIcon--minicart{
+    color: white;
+}
+
+
+.minicartProductListContainer::-webkit-scrollbar{
+    
+    width: 4px;
+}
+.minicartProductListContainer::-webkit-scrollbar-track{
+    background-color:#C4C4C4;
+}
+.minicartProductListContainer::-webkit-scrollbar-thumb {
+    background-color: black;
+}

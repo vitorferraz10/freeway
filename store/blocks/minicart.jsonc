@@ -1,0 +1,125 @@
+{
+    "minicart.v2": {
+    "children": ["minicart-base-content"],
+    "props":{
+    "variation":"drawer",
+    "maxDrawerWidth": 312,
+    "itemCountMode": "distinct", 
+    "blockClass": "minicart"
+    }
+    },
+    
+    "minicart-base-content": {
+        "blocks":["minicart-empty-state"],
+        "children": [
+            "flex-layout.row#minicart-header",
+            "minicart-product-list",
+            "flex-layout.row#minicartfooter"
+        ]  ,
+        "props": {
+            "blockClass": "minicart-base"
+        }
+    },
+
+    "flex-layout.row#minicart-header": {
+        "children": ["rich-text#header-minicart"], 
+        "props": {
+            "blockClass": "text-header-minicart"
+        }
+    },
+    "rich-text#header-minicart": {
+    "props": {
+        "text": "MINHA SACOLA", 
+        "blockClass": "text-header-minicart"
+    }
+    },
+    
+    "flex-layout.row#minicartfooter": {
+        "children": [
+            "flex-layout.col#minicartfooter-col"
+
+        ] ,  
+        "props": {
+            "blockClass": "flex-row-minicart"
+        }
+    },
+    
+    "flex-layout.col#minicartfooter-col": {
+        "children":[
+            "minicart-summary",
+            "minicart-checkout-button"
+        ], 
+        "props": {
+            "blockClass": "minicart-col"
+        }
+    },
+    
+    "minicart-product-list#minicartlist":{
+        "blocks":["product-list#productlist-minicart"], 
+        "props": {
+            "blockClass": "minicart-list"
+        }
+    },
+    
+    "product-list#productlist-minicart":{
+        "blocks":["product-list-content-mobile"], 
+        "props": {
+            "blockClass": "minicart-product"
+        }
+    },
+    
+    "product-list-content-mobile":{
+        "children":["flex-layout.row#contentminicart"], 
+            "props": {
+                "blockClass": "minicart-mobile"
+            }
+        
+    },
+    
+    "flex-layout.row#contentminicart":{
+        "children":[
+            "product-list-image",
+            "flex-layout.col#minicartproduct-info",
+            "remove-button"
+        ], 
+        "props": {
+            "blockClass": "minicart-row"
+        }
+
+    },
+    
+    "flex-layout.col#minicartproduct-info":{
+        "children":[
+            /* "product-name", */
+            "price"
+        ], 
+         "props": {
+            "blockClass": "product-info"
+        }
+    },
+    
+    "minicart-summary":{
+        "blocks": ["checkout-summary.compact"], 
+        "props": {
+            "blockClass": "summary"
+        }
+    },
+    
+    "checkout-summary.compact": {
+        "children": ["summary-totalizers"],
+        "props":{
+            "totalizersToShow": [
+                "Items",
+                "Discounts"
+            ], 
+            "blockClass": "compact"
+        }
+    },
+    
+    "summary-totalizers":{
+        "props":{
+            "showTotal": true, 
+            "blockClass": "totalizers"
+        }
+    }
+    }

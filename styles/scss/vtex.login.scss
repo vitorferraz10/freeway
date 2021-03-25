@@ -1,0 +1,58 @@
+.formTitle{
+    font-size: 15px;
+    padding: 0;
+}
+.portalWrapper :global(.vtex-login-2-x-contentContainer){
+    height: 100%;
+}
+.contentFormVisible{
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+}
+
+.content--emailVerification{
+    padding: 0;
+}
+.content--accountOptions{
+    padding: 0;
+}
+
+.arrowUp{
+    display: none;
+}
+
+.accountOptionsSectionTitle{
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px !important;
+    border-bottom: solid 1px #EC671A;
+    
+}
+.accountOptionsSectionItem{
+    font-size: 14px;
+    text-align: center;
+    border-bottom: solid 1px #EC671A;
+}
+
+.accessCodeOptionBtn :global(.vtex-button__label){
+    font-size: 12px;
+    padding: 0;
+    color: #575756;
+}
+.accessCodeOptionBtn :global(.vtex-button__label):hover{
+    color: white;
+}
+.emailPasswordOptionBtn :global(.vtex-button__label){
+    font-size: 12px;
+    padding: 0;
+    color: #575756;
+}
+.emailPasswordOptionBtn :global(.vtex-button__label):hover{
+    color: white;
+}
+
+.contentForm{
+    min-width: none !important;
+}

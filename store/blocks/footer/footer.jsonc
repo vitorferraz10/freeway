@@ -39,95 +39,434 @@
     }
   },
   "flex-layout.row#line-1-mobile": {
-    "children": [
-      "flex-layout.col#footer-mobile-1",
-      "flex-layout.col#footer-mobile-img-click"
-    ],
+    "children": ["flex-layout.col#footer-mobile-1"],
     "props": {
       "blockClass": "line-footer"
     }
   },
   "flex-layout.col#footer-mobile-1": {
-    "children": ["rich-text#line-1-footer-mobile"],
+    "children": ["vtex.menu@2.x:menu#footer-mobile-line-1"],
     "props": {
-      "blockClass": "col-2-text"
+      "blockClass": "menu-footer-mobile"
+    }
+  },
+  "vtex.menu@2.x:menu#footer-mobile-line-1": {
+    "children": ["menu-item#institucional"]
+  },
+  "menu-item#institucional": {
+    "props": {
+      "blockClass": "item-menu-footer-mobile",
+      "id": "menu-item#institucional",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Institucional",
+        "text": "Institucional"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#institucional"]
+  },
+  "vtex.menu@2.x:submenu.accordion#institucional": {
+    "children": ["flex-layout.col#institucional-mobile"],
+    "props": {
+      "blockClass": "footer-mobile-row",
+      "orientation": "vertical"
     }
   },
 
-  "rich-text#line-1-footer-mobile": {
-    "props": {
-      "text": "**Institucional**",
-      "blockClass": "text-footer-mobile"
-    }
+  "flex-layout.col#institucional-mobile": {
+    "children": ["vtex.menu@2.x:menu#footer-institucional"]
   },
-
-  "flex-layout.col#footer-mobile-img-click": {
-    "children": ["image#option-submenu"],
-    "props": {
-      "blockClass": "div-img",
-      "horizontalAlign": "right"
-    }
-  },
-
-  "image#option-submenu": {
-    "props": {
-      "src": "assets/+.png",
-      "max-width": "24px",
-      "maxHeight": "24px",
-      "blockClass": "img-click"
-    }
-  },
-  "flex-layout.row#line-2-mobile": {
+  "vtex.menu@2.x:menu#footer-institucional": {
     "children": [
-      "flex-layout.col#footer-mobile-line-2-text",
-      "flex-layout.col#footer-mobile-line-2-img"
+      "menu-item#sobre",
+      "menu-item#frete",
+      "menu-item#privacidade",
+      "menu-item#conservacao",
+      "menu-item#senha",
+      "menu-item#troca",
+      "menu-item#preco"
     ],
+    "props": {
+      "orientation": "vertical"
+    }
+  },
+
+  "menu-item#sobre": {
+    "props": {
+      "blockClass": "item-submenu-footer-mobile",
+      "id": "menu-item#sobre",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Sobre a Freeway",
+        "text": "Sobre a Freeway"
+      }
+    }
+  },
+
+  "menu-item#frete": {
+    "props": {
+      "blockClass": "item-submenu-footer-mobile",
+      "id": "menu-item#frete",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Condição de Frete",
+        "text": "Condição de Frete"
+      }
+    }
+  },
+
+  "menu-item#privacidade": {
+    "props": {
+      "blockClass": "item-submenu-footer-mobile",
+      "id": "menu-item#privacidade",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Política de Privacidade",
+        "text": "Política de Privacidade"
+      }
+    }
+  },
+
+  "menu-item#conservacao": {
+    "props": {
+      "blockClass": "item-submenu-footer-mobile",
+      "id": "menu-item#conservacao",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Dicas de Conservação",
+        "text": "Dicas de Conservação"
+      }
+    }
+  },
+
+  "menu-item#senha": {
+    "props": {
+      "blockClass": "item-submenu-footer-mobile",
+      "id": "menu-item#senha",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Esqueci a Senha",
+        "text": "Esqueci a Senha"
+      }
+    }
+  },
+
+  "menu-item#troca": {
+    "props": {
+      "blockClass": "item-submenu-footer-mobile",
+      "id": "menu-item#troca",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Política de Troca e Reembolso",
+        "text": "Política de Troca e Reembolso"
+      }
+    }
+  },
+
+  "menu-item#preco": {
+    "props": {
+      "blockClass": "item-submenu-footer-mobile",
+      "id": "menu-item#preco",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Politica de Preço",
+        "text": "Politica de Preço"
+      }
+    }
+  },
+
+  "flex-layout.row#line-2-mobile": {
+    "children": ["flex-layout.col#footer-mobile-line-2-text"],
     "props": {
       "blockClass": "line-footer"
     }
   },
   "flex-layout.col#footer-mobile-line-2-text": {
-    "children": ["rich-text#line-2-footer-mobile"]
-  },
-
-  "rich-text#line-2-footer-mobile": {
+    "children": ["vtex.menu@2.x:menu#footer-mobile-line-2"],
     "props": {
-      "text": "**Atendimento**",
-      "blockClass": "text-footer-mobile"
+      "blockClass": "menu-footer-mobile"
     }
   },
-  "flex-layout.col#footer-mobile-line-2-img": {
-    "children": ["image#option-submenu"],
+
+  "vtex.menu@2.x:menu#footer-mobile-line-2": {
+    "children": ["menu-item#atendimento"]
+  },
+  "menu-item#atendimento": {
     "props": {
-      "horizontalAlign": "right"
+      "blockClass": "item-menu-footer-mobile",
+      "id": "menu-item#atendimento",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Atendimento",
+        "text": "Atendimento"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#atendimento"]
+  },
+  "vtex.menu@2.x:submenu.accordion#atendimento": {
+    "children": ["flex-layout.col#footer-mobile-row-2"],
+    "props": {
+      "blockClass": "footer-mobile-row"
+    }
+  },
+
+  "flex-layout.col#footer-mobile-row-2": {
+    "children": ["vtex.menu@2.x:menu#footer-mobile-atendimento"]
+  },
+  "vtex.menu@2.x:menu#footer-mobile-atendimento": {
+    "children": [
+      "menu-item#fale-conosco",
+      "menu-item#duvidas-frequentes",
+      "menu-item#televendas",
+      "menu-item#trocas"
+    ],
+    "props": {
+      "orientation": "vertical"
+    }
+  },
+  "menu-item#fale-conosco": {
+    "props": {
+      "blockClass": "item-submenu-footer-mobile",
+      "id": "menu-item#item-1",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Fale Conosco",
+        "text": "Fale Conosco"
+      }
+    }
+  },
+  "menu-item#duvidas-frequentes": {
+    "props": {
+      "blockClass": "item-submenu-footer-mobile",
+      "id": "menu-item#duvidas",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Duvidas Frequentes",
+        "text": "Duvidas Frequentes"
+      }
+    }
+  },
+  "menu-item#televendas": {
+    "props": {
+      "blockClass": "item-submenu-footer-mobile",
+      "id": "menu-item#televendas",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Televendas (16) 3720-2145",
+        "text": "Televendas (16) 3720-2145"
+      }
+    }
+  },
+  "menu-item#trocas": {
+    "props": {
+      "blockClass": "item-submenu-footer-mobile",
+      "id": "menu-item#trocas",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Trocas e Devoluções",
+        "text": "Trocas e Devoluções"
+      }
     }
   },
 
   "flex-layout.row#line-3-mobile": {
-    "children": [
-      "flex-layout.col#footer-mobile-line-3-text",
-      "flex-layout.col#footer-mobile-line-3-img"
-    ],
+    "children": ["flex-layout.col#footer-mobile-line-3-text"],
     "props": {
       "blockClass": "line-footer"
     }
   },
 
   "flex-layout.col#footer-mobile-line-3-text": {
-    "children": ["rich-text#line-3-footer-mobile"]
+    "children": ["vtex.menu@2.x:menu#line-3-footer-mobile"]
   },
-  "rich-text#line-3-footer-mobile": {
+  "vtex.menu@2.x:menu#line-3-footer-mobile": {
+    "children": ["menu-item#pagamento"],
     "props": {
-      "text": "**Formas de pagamento**",
-      "blockClass": "text-footer-mobile"
+      "blockClass": "line-pagamento"
     }
   },
-  "flex-layout.col#footer-mobile-line-3-img": {
-    "children": ["image#option-submenu"],
+  "menu-item#pagamento": {
     "props": {
-      "horizontalAlign": "right"
+      "blockClass": "item-menu-footer-mobile",
+      "id": "menu-item#pagamento",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Formas de Pagamento",
+        "text": "Formas de Pagamento"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#pagamentos"]
+  },
+
+  "vtex.menu@2.x:submenu.accordion#pagamentos": {
+    "children": ["flex-layout.row#pagamentos"],
+    "props": {
+      "blockClass": "footer-mobile-row"
     }
   },
+
+  "flex-layout.row#pagamentos": {
+    "children": ["vtex.menu@2.x:menu#pagamentos"], 
+    "props": {
+      "preserveLayoutOnMobile": true
+    }
+  },
+
+  "vtex.menu@2.x:menu#pagamentos": {
+    "children": [
+      "flex-layout.row#icons-payment"
+    ], 
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": "icons-payment-mobile"
+      
+    }
+  },
+  "flex-layout.row#icons-payment": {
+    "children": ["flex-layout.col#icons-payment"], 
+    "props": {
+      "blockClass": "row-payment-footer"
+    }
+  },
+  
+  "flex-layout.row#payment-mobile-1": {
+    "children": [
+      "image#payment-mobile-1",
+      "image#payment-mobile-2",
+      "image#payment-mobile-3",
+      "image#payment-mobile-4"
+    ], 
+    "props": {
+      "blockClass": "flex-mobile-payment", 
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "image#payment-mobile-1": {
+    "props": {
+      "src": "assets/icon-1.png",
+      "width": "18px",
+      "blockClass": "img-payment-mobile"
+    }
+  },
+  "image#payment-mobile-2": {
+    "props": {
+      "src": "assets/icon-2.png",
+      "width": "18px",
+      "blockClass": "img-payment-mobile"
+    }
+  },
+  "image#payment-mobile-3": {
+    "props": {
+      "src": "assets/icon-3.png",
+      "width": "18px",
+      "blockClass": "img-payment-mobile"
+    }
+  },
+  "image#payment-mobile-4": {
+    "props": {
+      "src": "assets/icon-4.png",
+      "width": "18px", 
+      "blockClass": "img-payment-mobile"
+    }
+  },
+  "flex-layout.row#payment-mobile-2": {
+    "children": [
+      "image#payment-mobile-5",
+      "image#payment-mobile-6",
+      "image#payment-mobile-7",
+      "image#payment-mobile-8"
+    ],
+    "props": {
+      "blockClass": "flex-mobile-payment", 
+      "horizontalAlign": "center", 
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "image#payment-mobile-5": {
+    "props": {
+      "src": "assets/icon-5.png",
+      "width": "18px",
+      "blockClass": "img-payment-mobile"
+    }
+  },
+  "image#payment-mobile-6": {
+    "props": {
+      "src": "assets/icon-6.png",
+      "width": "18px",
+      "blockClass": "img-payment-mobile"
+    }
+  },
+  "image#payment-mobile-7": {
+    "props": {
+      "src": "assets/icon-7.png",
+      "width": "18px",
+      "blockClass": "img-payment-mobile"
+    }
+  },
+  "image#payment-mobile-8": {
+    "props": {
+      "src": "assets/icon-8.png",
+      "width": "18px",
+      "blockClass": "img-payment-mobile"
+    }
+  },
+
 
   "flex-layout.row#line-4-mobile": {
     "children": [
@@ -158,7 +497,7 @@
     "children": ["flex-layout.row#redes-sociais"],
     "props": {
       "blockClass": "medias-socias-footer-mobile",
-      "orientation": "vertical", 
+      "orientation": "vertical",
       "horizontalAlign": "right"
     }
   },
@@ -188,7 +527,7 @@
     }
   },
   "image#social-3-mobile": {
-    "props": {  
+    "props": {
       "src": "assets/ico-twitter.png",
       "width": "24px",
       "blockClass": "img-mobile-sociais"
@@ -208,7 +547,6 @@
       "blockClass": "footer-col-4",
       "orientation": "vertical",
       "horizontalAlign": "left"
-
     }
   },
   "rich-text#security-mobile": {
@@ -268,7 +606,7 @@
   "flex-layout.row#line-2-line-down-footer": {
     "children": ["rich-text#corebiz-footer", "rich-text#vtex-footer"],
     "props": {
-      "preventHorizontalStretch": true, 
+      "preventHorizontalStretch": true,
       "blockClass": "text-down-footer"
     }
   },
@@ -314,7 +652,6 @@
     }
   },
 
-
   /*DESKTOP*/
   "flex-layout.row#footer-desktop": {
     "children": [
@@ -334,8 +671,7 @@
     "children": ["rich-text#title-col1", "vtex.menu@2.x:menu#footer-menu"],
     "props": {
       "blockClass": "footer-col1",
-      "max-width": "1318px" 
-      
+      "max-width": "1318px"
     }
   },
 
@@ -582,13 +918,16 @@
     "children": ["flex-layout.row#payment-1", "flex-layout.row#payment-2"],
     "props": {
       "blockClass": "row-icon-1",
-      "maxWidth": "171px",
-      "maxHeight": "56px"
+      "maxWidth": "171px"/* ,
+      "maxHeight": "56px" */
     }
   },
 
   "flex-layout.row#payment-1": {
-    "children": ["image#icon-1", "image#icon-2", "image#icon-3", "image#icon-4"]
+    "children": ["image#icon-1", "image#icon-2", "image#icon-3", "image#icon-4"], 
+    "props": {
+      "blockClass": "payment-footer"
+    }
   },
 
   "image#icon-1": {
@@ -620,7 +959,10 @@
   },
 
   "flex-layout.row#payment-2": {
-    "children": ["image#icon-5", "image#icon-6", "image#icon-7", "image#icon-8"]
+    "children": ["image#icon-5", "image#icon-6", "image#icon-7", "image#icon-8"], 
+    "props": {
+      "blockClass": "payment-footer"
+    }
   },
   "image#icon-5": {
     "props": {
@@ -746,7 +1088,7 @@
     "props": {
       "src": "assets/security-2.png",
       "maxWidth": "48px",
-      "maxHeight": "30px", 
+      "maxHeight": "30px",
       "blockClass": "img-security"
     }
   },

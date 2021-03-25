@@ -1,8 +1,8 @@
  {
   "store.orderplaced": {
-    "blocks": []
-  }
-/* 
+    "blocks": ["product-summary.shelf"]
+  },
+
   "store.account": {
     "blocks": ["my-account"],
     "parent": {
@@ -21,7 +21,7 @@
       "showPasswordVerificationIntoTooltip": true
     }
   },
-
+ 
   "product-summary.shelf": {
     "children": [
       "product-summary-add-to-list-button",
@@ -30,8 +30,17 @@
       "product-summary-space",
       "product-summary-price",
       "product-identifier.summary",
-      "add-to-cart-button"
-    ]
+      "add-to-cart-button#shelf"
+    ], 
+    "props": {
+     " blockClass":"product-summary"
   }
-  */
+}, 
+  "add-to-cart-button#shelf": {
+    "props": {
+      "text": "COMPRAR", 
+      "blockClass": "btn-shelf"
+    }
+  }
+ 
 }
