@@ -134,7 +134,9 @@
   }
 }
 
-
+.sliderTrackContainer :global(.vtex-product-summary-2-x-spacer){
+display: none;
+}
 
 .paginationDotsContainer--shelf-vitrine,
 .paginationDotsContainer--shelf-vitrine-2 {

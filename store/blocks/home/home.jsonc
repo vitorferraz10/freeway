@@ -188,7 +188,7 @@
       "props": {
         "itemsPerPage": {
           "desktop": 4,
-          "tablet": 3,
+          "tablet": 2,
           "phone": 1
         },
         "blockClass": "shelf-vitrine",
@@ -282,7 +282,7 @@
       "props": {
         "itemsPerPage": {
           "desktop": 4,
-          "tablet": 3,
+          "tablet": 2,
           "phone": 1
         },
         "blockClass": "shelf-vitrine-2",

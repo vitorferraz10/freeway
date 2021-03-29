@@ -51,11 +51,7 @@
     }
   },
   "flex-layout.row#items-mobile": {
-    "children": [
-      "image#help-mobile",
-      "image#cart-mobile",
-      "image#click-menu-mobile"
-    ],
+    "children": ["image#help-mobile", "minicart.v2", "image#click-menu-mobile"],
     "props": {
       "blockClass": "items-mobile",
       "horizontalAlign": "center",
@@ -159,9 +155,8 @@
   },
   "vtex.menu@2.x:menu#header": {
     "children": [
-       
-       "drawer#ajuda",
-       "login#header"/* ,
+      "drawer#ajuda",
+      "login#header" /* ,
         "image#card-header" */
     ],
     "props": {
@@ -184,7 +179,6 @@
       }
     }
   },
- 
 
   "flex-layout.row#line-down-header": {
     "children": ["vtex.menu@2.x:menu#down-header"],
@@ -220,42 +214,57 @@
         "tagTitle": "LANÇAMENTOS",
         "text": "LANÇAMENTOS"
       }
-    }, 
+    },
     "blocks": ["vtex.menu@2.x:submenu#lancamentos"]
   },
   "vtex.menu@2.x:submenu#lancamentos": {
-    "children": ["flex-layout.row#sub-menu-lancamentos-desk"],
+    "children": ["flex-layout.row#items-submenu-lancamentos"],
     "props": {
       "width": "100%",
-      "blockClass": "shop-submenu"/* , 
+      "blockClass": "shop-submenu" /* , 
       "orientation": "vertical" */
     }
   },
-  "flex-layout.row#sub-menu-lancamentos-desk": {
-    "children": ["vtex.menu@2.x:menu#lancamento"],
+  "flex-layout.row#items-submenu-lancamentos": {
+    "children": [
+      "flex-layout.col#items-submenu-lancamentos-1",
+      "flex-layout.col#items-submenu-lancamentos-2"
+    ],
     "props": {
       "blockClass": "row-submenu-header"
     }
   },
-  "vtex.menu@2.x:menu#lancamento": {
+
+  "flex-layout.col#items-submenu-lancamentos-1": {
     "children": [
       "vtex.menu@2.x:menu#masculino",
-      "vtex.menu@2.x:menu#shop-feminino", 
-      "vtex.menu@2.x:menu#shop-acessorios", 
+      "vtex.menu@2.x:submenu#shop-feminino"
+    ],
+    "props": { "blockClass": "submenu-row-header" }
+  },
+
+  "flex-layout.col#items-submenu-lancamentos-2": {
+    "children": [
+      "vtex.menu@2.x:menu#shop-acessorios",
       "vtex.menu@2.x:menu#shop-artigos-viagem"
+    ]
+  },
+
+  /* "vtex.menu@2.x:menu#lancamento": {
+    "children": [
+     
     ],
     "props": {
       "orientation": "orizontal"
-
     }
-  },
+  }, */
   "menu-item#down-header-item-2": {
     "props": {
       "blockClass": "items-header-down-p",
       "id": "down-header-item-2",
       "type": "custom",
       "highlight": false,
-      "itemProps": {  
+      "itemProps": {
         "type": "internal",
         "href": "#",
         "noFollow": false,
@@ -268,11 +277,11 @@
   "vtex.menu@2.x:submenu#shop-masculino": {
     "children": ["vtex.menu@2.x:menu#masculino"],
     "props": {
-      "blockClass": "shop-submenu", 
-      "width":"100%"
+      "blockClass": "shop-submenu",
+      "width": "100%"
     }
   },
-  
+
   "vtex.menu@2.x:menu#masculino": {
     "children": [
       "menu-item#submenu-masculino-desk-1",
@@ -286,12 +295,10 @@
       "menu-item#submenu-masculino-desk-5",
       "menu-item#submenu-masculino-desk-6",
       "menu-item#submenu-masculino-desk-7"
-    ], 
+    ],
     "props": {
       "orientation": "vertical"
-      
     }
-   
   },
   "menu-item#submenu-masculino-desk-1": {
     "props": {
@@ -500,7 +507,7 @@
       "menu-item#submenu-feminino-desk-4"
     ],
     "props": {
-      "blockClass": "flex-sub-menu", 
+      "blockClass": "flex-sub-menu",
       "orientation": "vertical"
     }
   },
@@ -600,7 +607,7 @@
       "menu-item#submenu-acessórios-desk-2",
       "menu-item#submenu-acessórios-desk-3",
       "menu-item#submenu-acessórios-desk-4"
-    ], 
+    ],
     "props": {
       "orientation": "vertical"
     }
@@ -700,7 +707,7 @@
       "menu-item#submenu-artigos-viagem-desk-1",
       "menu-item#submenu-artigos-viagem-desk-2",
       "menu-item#submenu-artigos-viagem-desk-3"
-    ], 
+    ],
     "props": {
       "orientation": "vertical"
     }
