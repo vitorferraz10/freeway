@@ -51,7 +51,11 @@
     }
   },
   "flex-layout.row#items-mobile": {
-    "children": ["image#help-mobile", "minicart.v2", "image#click-menu-mobile"],
+    "children": [
+      "image#help-mobile",
+      "image#cart-mobile",
+      "image#click-menu-mobile"
+    ],
     "props": {
       "blockClass": "items-mobile",
       "horizontalAlign": "center",
@@ -218,46 +222,212 @@
     "blocks": ["vtex.menu@2.x:submenu#lancamentos"]
   },
   "vtex.menu@2.x:submenu#lancamentos": {
-    "children": ["flex-layout.row#items-submenu-lancamentos"],
+    "children": ["flex-layout.row#sub-menu-lancamentos-desk"],
     "props": {
       "width": "100%",
       "blockClass": "shop-submenu" /* , 
       "orientation": "vertical" */
     }
   },
-  "flex-layout.row#items-submenu-lancamentos": {
-    "children": [
-      "flex-layout.col#items-submenu-lancamentos-1",
-      "flex-layout.col#items-submenu-lancamentos-2"
-    ],
+  "flex-layout.row#sub-menu-lancamentos-desk": {
+    "children": ["vtex.menu@2.x:menu#lancamento"],
     "props": {
       "blockClass": "row-submenu-header"
     }
   },
-
-  "flex-layout.col#items-submenu-lancamentos-1": {
+  "vtex.menu@2.x:menu#lancamento": {
     "children": [
-      "vtex.menu@2.x:menu#masculino",
-      "vtex.menu@2.x:submenu#shop-feminino"
-    ],
-    "props": { "blockClass": "submenu-row-header" }
-  },
-
-  "flex-layout.col#items-submenu-lancamentos-2": {
-    "children": [
-      "vtex.menu@2.x:menu#shop-acessorios",
-      "vtex.menu@2.x:menu#shop-artigos-viagem"
-    ]
-  },
-
-  /* "vtex.menu@2.x:menu#lancamento": {
-    "children": [
-     
+      "flex-layout.col#masculino&feminino",
+      "flex-layout.col#acessorios&artigos"
     ],
     "props": {
       "orientation": "orizontal"
     }
-  }, */
+  },
+  "flex-layout.col#masculino&feminino": {
+    "children": [
+      "flex-layout.row#text-menu-masculino",
+
+      "vtex.menu@2.x:menu#masculino",
+      "flex-layout.row#text-menu-feminino",
+
+      "vtex.menu@2.x:menu#shop-feminino"
+    ],
+    "props": {
+      "blockClass": "col-1-menu"
+    }
+  },
+
+  "flex-layout.row#text-menu-masculino": {
+    "children": [
+      "rich-text#masculino-menu-main",
+      "vtex.menu@2.x:menu#vertudo-masculino"
+    ],
+    "props": {
+      "preventHorizontalStretch": true
+    }
+  },
+  "vtex.menu@2.x:menu#vertudo-masculino": {
+    "children": ["menu-item#masculino-vertudo"],
+    "props": {
+      "blockClass": "vertudo"
+    }
+  },
+
+  "menu-item#masculino-vertudo": {
+    "props": {
+      "blockClass": "items-vertudo",
+      "id": "items-vertudo",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "ver tudo",
+        "text": "ver tudo"
+      }
+    }
+  },
+
+  "rich-text#masculino-menu-main": {
+    "props": {
+      "text": "Masculino",
+      "blockClass": "title-menu-novidades"
+    }
+  },
+
+  "flex-layout.row#text-menu-feminino": {
+    "children": [
+      "rich-text#feminino-menu-main",
+      "vtex.menu@2.x:menu#vertudo-feminino"
+    ],
+    "props": {
+      "preventHorizontalStretch": true
+    }
+  },
+
+  "vtex.menu@2.x:menu#vertudo-feminino": {
+    "children": ["menu-item#feminino-vertudo"],
+    "props": {
+      "blockClass": "vertudo"
+    }
+  },
+  "menu-item#feminino-vertudo": {
+    "props": {
+      "blockClass": "items-vertudo",
+      "id": "items-vertudo",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "ver tudo",
+        "text": "ver tudo"
+      }
+    }
+  },
+
+  "rich-text#feminino-menu-main": {
+    "props": {
+      "text": "Feminino",
+      "blockClass": "title-menu-novidades"
+    }
+  },
+
+  "flex-layout.col#acessorios&artigos": {
+    "children": [
+      "flex-layout.row#text-menu-acessorios",
+      "vtex.menu@2.x:menu#shop-acessorios",
+      "flex-layout.row#text-menu-artigos",
+
+      "vtex.menu@2.x:menu#shop-artigos-viagem"
+    ],
+    "props": {
+      "blockClass": "col-1-menu"
+    }
+  },
+
+  "flex-layout.row#text-menu-acessorios": {
+    "children": [
+      "rich-text#acessorios-menu-main",
+      "vtex.menu@2.x:menu#vertudo-acessorios"
+    ],
+    "props": {
+      "preventHorizontalStretch": true
+    }
+  },
+  "rich-text#acessorios-menu-main": {
+    "props": {
+      "text": "Acessorios",
+      "blockClass": "title-menu-novidades"
+    }
+  },
+
+  "vtex.menu@2.x:menu#vertudo-acessorios": {
+    "children": ["menu-item#vertudo-acessorios"],
+    "props": {
+      "blockClass": "vertudo"
+    }
+  },
+
+  "menu-item#vertudo-acessorios": {
+    "props": {
+      "blockClass": "items-vertudo",
+      "id": "items-vertudo",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "ver tudo",
+        "text": "ver tudo"
+      }
+    }
+  },
+
+  "flex-layout.row#text-menu-artigos": {
+    "children": [
+      "rich-text#artigos-menu-main",
+      "vtex.menu@2.x:menu#vertudo-artigos"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "flex-artigos-menu"
+    }
+  },
+  "rich-text#artigos-menu-main": {
+    "props": {
+      "text": "Artigos pra viagem",
+      "blockClass": "title-menu-novidades"
+    }
+  },
+
+  "vtex.menu@2.x:menu#vertudo-artigos": {
+    "children": ["menu-item#vertudo-artigos"],
+    "props": {
+      "blockClass": "vertudo"
+    }
+  },
+
+  "menu-item#vertudo-artigos": {
+    "props": {
+      "blockClass": "items-vertudo",
+      "id": "items-vertudo",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "ver tudo",
+        "text": "ver tudo"
+      }
+    }
+  },
+
   "menu-item#down-header-item-2": {
     "props": {
       "blockClass": "items-header-down-p",
